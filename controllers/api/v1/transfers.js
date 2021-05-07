@@ -1,6 +1,6 @@
 const getAll = (req, res)=>{
     res.json({
-        status: "succes", 
+        status: "success", 
         data:{
             transfer:{
                 message: "received coins"
@@ -11,7 +11,7 @@ const getAll = (req, res)=>{
 
 const create = (req, res) => {
     res.json({
-        status: "succes", 
+        status: "success", 
         data:{
             transfer: []}      
     });
@@ -19,7 +19,7 @@ const create = (req, res) => {
 
 const upload = (req, res) => {
     res.json({
-        status: "succes", 
+        status: "success", 
         data: {
             message:"GET transfers" + req.query.user
         }
@@ -28,7 +28,7 @@ const upload = (req, res) => {
 
 const status = (req, res) => {
     res.json({
-        status: "succes", 
+        status: "success", 
         data: {
             message: "GET leaders" + req.params.id
         }

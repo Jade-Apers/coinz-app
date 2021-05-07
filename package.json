@@ -16,5 +16,17 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.7"
-  }
+  },
+  "description": "",
+  "main": "app.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jade-Apers/coinz-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jade-Apers/coinz-app/issues"
+  },
+  "homepage": "https://github.com/Jade-Apers/coinz-app#readme"
 }
