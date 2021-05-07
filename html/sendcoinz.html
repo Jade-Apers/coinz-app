@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="dist/app.css">
 </head>
 <body>
-    
+    <a href="index.html" class="btn">Back</a>
+    <div>
+        <h2>Send coinz</h2>
+    </div>
+    <div class="sendCoinz">
+        <form>
+            <label for="to">To</label>
+            <input type="text">
+            <label for="amount">Amount of Coinz</label>
+            <input type="number">
+            <label for="reason">Reason</label>
+            <select id="reason" name="reason">
+                <option value="teamwork">Teamwork &#128540;</option>
+                <option value="extramile">Going the extra mile &#128076;</option>
+                <option value="helping">Helping out &#128519;</option>
+                <option value="other">Other &#129500;</option>
+            </select>
+            <label for="message">Message</label>
+            <input type="text" value="optional">
+            <input type="submit" value="Continue">
+        </form>
+    </div>
+    <a href="index.html" class="btn confirm-alert">Confirm</a>
+    <a href="index.html" class="btn">Cancel</a>
 </body>
 </html>
