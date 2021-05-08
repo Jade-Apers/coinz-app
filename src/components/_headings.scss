@@ -1,0 +1,16 @@
+
+//@use "./colors";
+@import "../components/colors";
+
+$h1font: "roboto";
+$h2font: "arial";
+$pfont: "roboto";
+
+h1 {
+    font-family: $h1font;
+}
+
+body {
+    background-color: $lila;
+    font-family: $pfont;
+}

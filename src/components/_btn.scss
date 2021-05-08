@@ -1,1 +1,7 @@
-@use '../components/colors'
+//@use '../components/colors';
+@use './colors';
+//@import "../components/colors";
+
+.btn {
+    background-color: $lila;
+}
