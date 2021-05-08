@@ -2,5 +2,11 @@
 @import '../src/components/btn';
 @import '../src/components/colors';
 @import '../src/components/cta';
-@import '../src/components/footer';
 @import '../src/components/nav';
+
+@import '../pages/home.scss';
+@import '../pages/leaderboard.scss';
+@import '../pages/login.scss';
+@import '../pages/receivecoinz.scss';
+@import '../pages/sendcoinz.scss';
+@import '../pages/signup.scss';

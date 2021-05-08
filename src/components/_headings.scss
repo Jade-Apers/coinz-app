@@ -2,15 +2,28 @@
 //@use "./colors";
 @import "../components/colors";
 
-$h1font: "roboto";
-$h2font: "arial";
+$h1font: "rubik";
+$h2font: "roboto mono";
 $pfont: "roboto";
 
 h1 {
     font-family: $h1font;
+    font-weight: 800;
+    color: blue;
+    text-align: center;
+}
+
+h2 {
+    font-family: $h2font;
+    color: $blue;
 }
 
 body {
     background-color: $lila;
     font-family: $pfont;
+    color: $blue;
+}
+
+p {
+    color: black;
 }

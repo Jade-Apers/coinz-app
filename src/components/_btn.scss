@@ -1,7 +1,32 @@
 //@use '../components/colors';
-@use './colors';
-//@import "../components/colors";
+//@use './colors';
+@import "../components/colors";
+@import "../components/headings";
+
+*{
+    box-sizing: border-box;
+}
 
 .btn {
-    background-color: $lila;
+    background-color: $green;
+    font-family: $h2font;
+    font-weight: 600;
+    color: $blue;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.btn-second {
+    background-color: $blue;
+    font-family: $h2font;
+    font-weight: 600;
+    color: $yellow;
+    padding: 10px; 
+    text-decoration: none;
+}
+
+a {
+    font-family: $h2font;
+    font-weight: 600;
+    color: $blue;
 }

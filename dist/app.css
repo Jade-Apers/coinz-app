@@ -1,23 +1,100 @@
 h1 {
-  font-family: "roboto";
+  font-family: "rubik";
+  font-weight: 800;
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  font-family: "roboto mono";
+  color: #000aff;
 }
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
+  color: #000aff;
 }
 
-.btn {
-  background-color: #d7dbff;
+p {
+  color: black;
 }
 
 h1 {
-  font-family: "roboto";
+  font-family: "rubik";
+  font-weight: 800;
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  font-family: "roboto mono";
+  color: #000aff;
 }
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
+  color: #000aff;
+}
+
+p {
+  color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #33ff00;
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #000aff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btn-second {
+  background-color: #000aff;
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #fffcdd;
+  padding: 10px;
+  text-decoration: none;
+}
+
+a {
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #000aff;
+}
+
+h1 {
+  font-family: "rubik";
+  font-weight: 800;
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  font-family: "roboto mono";
+  color: #000aff;
+}
+
+body {
+  background-color: #d7dbff;
+  font-family: "roboto";
+  color: #000aff;
+}
+
+p {
+  color: black;
+}
+
+body {
+  background-color: #d7dbff;
+  text-align: center;
 }
 
 /*# sourceMappingURL=app.css.map */
