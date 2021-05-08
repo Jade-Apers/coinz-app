@@ -100,8 +100,32 @@ h1 {
   text-align: center;
 }
 
+.leaderboard {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  background-color: #fffcdd;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.leaderboard__name {
+  background-color: #d7dbff;
+  padding: 10px;
+  margin: 15px 0px 15px 0px;
+}
+
+.leaderboard__score {
+  background-color: #000aff;
+  color: white;
+  padding: 10px;
+  margin: 15px 0px 15px 0px;
+}
+
 .welcome {
   text-align: center;
+  margin: 50px;
 }
 
 .join {
@@ -117,12 +141,11 @@ a {
 input {
   width: 100%;
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0px 10px 0px;
 }
 
 input[type=submit] {
-  text-align: center;
-  align-items: center;
+  align-self: center;
   width: auto;
   margin: 10px 0px;
 }

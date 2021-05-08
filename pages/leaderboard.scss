@@ -1,0 +1,22 @@
+.leaderboard {
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    background-color: $yellow;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.leaderboard__name {
+    background-color: $lila;
+    padding: 10px;
+    margin: 15px 0px 15px 0px;
+}
+
+.leaderboard__score {
+    background-color: $blue;
+    color: white;
+    padding: 10px;
+    margin: 15px 0px 15px 0px;
+}
