@@ -94,7 +94,51 @@ p {
 
 body {
   background-color: #d7dbff;
+}
+
+h1 {
   text-align: center;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.join {
+  background-color: #fffcdd;
+  margin: 20px;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+}
+
+input[type=submit] {
+  text-align: center;
+  align-items: center;
+  width: auto;
+  margin: 10px 0px;
+}
+
+.welcome {
+  text-align: center;
+}
+
+.join {
+  background-color: #fffcdd;
+  margin: 20px;
+  padding: 15px;
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=app.css.map */

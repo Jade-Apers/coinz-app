@@ -1,0 +1,27 @@
+.welcome {
+    text-align: center;
+}
+
+.join {
+    background-color: $yellow;
+    margin: 20px;
+    padding: 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    width: 100%;
+    padding: 10px; 
+    margin: 10px 0px;
+}
+
+input[type=submit] {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    margin: 10px 0px;
+}
