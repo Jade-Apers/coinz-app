@@ -1,5 +1,7 @@
 @import "../src/components/colors";
-
+*{
+    box-sizing: border-box;
+}
 body{
     background-color: $lila;
 }
@@ -8,9 +10,24 @@ h1 {
     text-align: center;
 }
 
+h3{
+    font-size: 40px;
+    margin-bottom: -15px;
+}
+
+p{
+    color: $blue;
+    font-size: 20px;
+}
+
+.btn-second{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 nav {
     text-align: right;
-    padding: 20px; 
+    padding: 25px; 
 }
 
 .profile{
@@ -23,12 +40,36 @@ h1{
 
 .wallet{
 background-color: $yellow;
-padding: 80px;
+padding: 50px;
+margin: 30px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
 }
 
-.wallet__line{
-    color: $blue;
+.wallet__line-image{
+   color: $blue;
+   transform: rotate(90deg);
 }
+
+.wallet__send{
+padding-top: 45px;
+}
+
+.history__received{
+background-color: $yellow;
+margin: 30px;
+padding: 0.5px; 
+margin-bottom: -20px; 
+}
+
+.btn-leaderboard{
+    margin-top: 60px;
+}
+
+
+
 
 
 
