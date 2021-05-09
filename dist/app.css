@@ -77,29 +77,9 @@ a {
   color: #000aff;
 }
 
-h1 {
-  font-family: "rubik";
-  font-weight: 800;
-  color: blue;
-  text-align: center;
-}
-
-h2 {
-  font-family: "roboto mono";
-  color: #000aff;
-  text-align: center;
-}
-
-body {
-  background-color: #d7dbff;
-  font-family: "roboto";
-  color: #000aff;
-  text-align: center;
-}
-
-p {
-  color: black;
-  text-align: center;
+nav {
+  text-align: right;
+  padding: 25px;
 }
 
 * {
@@ -170,6 +150,11 @@ h1 {
 
 .btn-leaderboard {
   margin-top: 60px;
+}
+
+nav {
+  text-align: right;
+  padding: 25px;
 }
 
 /*# sourceMappingURL=app.css.map */
