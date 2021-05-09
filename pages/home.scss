@@ -1,9 +1,8 @@
 @import "../src/components/colors";
-*{
-    box-sizing: border-box;
-}
+
 body{
     background-color: $lila;
+    padding-bottom: 30px;
 }
 
 h1 {

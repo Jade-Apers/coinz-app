@@ -82,12 +82,9 @@ nav {
   padding: 25px;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 body {
   background-color: #d7dbff;
+  padding-bottom: 30px;
 }
 
 h1 {
