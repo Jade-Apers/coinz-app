@@ -157,4 +157,29 @@ nav {
   padding: 25px;
 }
 
+.leaderboard {
+  display: grid;
+  grid-template-columns: 90% 10%;
+  margin-right: 30px;
+  align-self: center;
+}
+
+.leaderboard__name {
+  background-color: #fffcdd;
+  padding: 15px;
+  margin-left: 50px;
+  margin-right: 50px;
+  text-align: left;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.leaderboard__score {
+  background-color: #000aff;
+  color: white;
+  padding: 15px;
+  margin-top: 20px;
+  margin-left: -50px;
+}
+
 /*# sourceMappingURL=app.css.map */
