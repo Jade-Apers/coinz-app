@@ -7,3 +7,29 @@ body{
 h1 {
     text-align: center;
 }
+
+nav {
+    text-align: right;
+    padding: 20px; 
+}
+
+.profile{
+    clip-path: circle(100px at center);
+}
+
+h1{
+    margin-top: -25px;
+}
+
+.wallet{
+background-color: $yellow;
+padding: 80px;
+}
+
+.wallet__line{
+    color: $blue;
+}
+
+
+
+

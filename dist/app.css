@@ -109,4 +109,22 @@ h1 {
   text-align: center;
 }
 
+nav {
+  text-align: right;
+  padding: 20px;
+}
+
+.profile {
+  clip-path: circle(100px at center);
+}
+
+h1 {
+  margin-top: -25px;
+}
+
+.wallet {
+  background-color: #fffcdd;
+  padding: 85px;
+}
+
 /*# sourceMappingURL=app.css.map */
