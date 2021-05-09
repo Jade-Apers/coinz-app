@@ -8,16 +8,19 @@ h1 {
 h2 {
   font-family: "roboto mono";
   color: #000aff;
+  text-align: center;
 }
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
   color: #000aff;
+  text-align: center;
 }
 
 p {
   color: black;
+  text-align: center;
 }
 
 h1 {
@@ -30,16 +33,19 @@ h1 {
 h2 {
   font-family: "roboto mono";
   color: #000aff;
+  text-align: center;
 }
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
   color: #000aff;
+  text-align: center;
 }
 
 p {
   color: black;
+  text-align: center;
 }
 
 * {
@@ -80,16 +86,19 @@ h1 {
 h2 {
   font-family: "roboto mono";
   color: #000aff;
+  text-align: center;
 }
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
   color: #000aff;
+  text-align: center;
 }
 
 p {
   color: black;
+  text-align: center;
 }
 
 body {
