@@ -1,8 +1,12 @@
 @import "../src/components/colors";
+@import "../src/components/btn";
+
+*{
+    box-sizing: border-box;
+}
 
 body{
     background-color: $lila;
-    padding-bottom: 30px;
 }
 
 h1 {
@@ -47,6 +51,10 @@ justify-content: center;
 align-items: center;
 }
 
+.history__profilepic {
+    clip-path: circle(20px at center);
+}
+
 .wallet__line-image{
    color: $blue;
    transform: rotate(90deg);
@@ -71,6 +79,12 @@ align-items: center;
 .btn-leaderboard{
     margin-top: 60px;
 }
+
+a{
+    text-decoration: none;
+}
+
+
 
 
 
