@@ -53,14 +53,19 @@ align-items: center;
 }
 
 .wallet__send{
-padding-top: 45px;
+    padding-top: 45px;
 }
 
 .history__received{
-background-color: $yellow;
-margin: 30px;
-padding: 0.5px; 
-margin-bottom: -20px; 
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: $yellow;
+    margin: 30px;
+    padding: 0.5px; 
+    }
+
+.history__profilepic {
+    clip-path: circle(20px at center);
 }
 
 .btn-leaderboard{

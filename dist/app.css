@@ -68,7 +68,6 @@ p {
   color: #fffcdd;
   padding: 10px;
   text-decoration: none;
-  font-size: 25px;
 }
 
 a {
@@ -138,12 +137,20 @@ h1 {
   padding-top: 45px;
 }
 
-body {
-  background-color: #d7dbff;
+.history__received {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  background-color: #fffcdd;
+  margin: 30px;
+  padding: 0.5px;
 }
 
-h1 {
-  text-align: center;
+.history__profilepic {
+  clip-path: circle(20px at center);
+}
+
+.btn-leaderboard {
+  margin-top: 60px;
 }
 
 .leaderboard-grid {
@@ -171,6 +178,10 @@ h1 {
 
 .leaderboard {
   margin: 25px;
+}
+
+.leaderboard-title {
+  margin-top: 20px;
 }
 
 .welcome {
