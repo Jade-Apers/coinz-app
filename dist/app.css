@@ -100,18 +100,18 @@ h1 {
   text-align: center;
 }
 
-.leaderboard {
+.leaderboard-grid {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 70% 30%;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  background-color: #fffcdd;
+  background-color: #d7dbff;
   padding: 20px;
   align-items: center;
   justify-content: center;
 }
 
 .leaderboard__name {
-  background-color: #d7dbff;
+  background-color: #fffcdd;
   padding: 10px;
   margin: 15px 0px 15px 0px;
 }
@@ -121,6 +121,10 @@ h1 {
   color: white;
   padding: 10px;
   margin: 15px 0px 15px 0px;
+}
+
+.leaderboard {
+  margin: 25px;
 }
 
 .welcome {
@@ -148,6 +152,39 @@ input[type=submit] {
   align-self: center;
   width: auto;
   margin: 10px 0px;
+}
+
+.sendCoinz {
+  margin: 25px;
+}
+
+input[value="(optional)"] {
+  color: grey;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px 15px 0px;
+}
+
+.sendCoinz-form {
+  background-color: #fffcdd;
+  padding: 15px;
+  font-family: "roboto mono";
+  font-weight: 600;
+}
+
+.btn-second {
+  margin: 10px 0px;
+  align-content: center;
+}
+
+.btn-cancel {
+  padding: 10px;
+  margin: 0px 0px 0px 10px;
+  background-color: #33ff00;
+  align-content: center;
 }
 
 .welcome {

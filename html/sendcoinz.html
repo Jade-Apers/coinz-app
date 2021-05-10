@@ -11,29 +11,30 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="index.html" class="btn">Back</a>
-    <div>
-        <h2>Send coinz</h2>
-    </div>
     <div class="sendCoinz">
-        <form>
-            <label for="to">To</label>
-            <input type="text">
-            <label for="amount">Amount of Coinz</label>
-            <input type="number">
-            <label for="reason">Reason</label>
-            <select id="reason" name="reason">
-                <option value="teamwork">Teamwork &#128540;</option>
-                <option value="extramile">Going the extra mile &#128076;</option>
-                <option value="helping">Helping out &#128519;</option>
-                <option value="other">Other &#129500;</option>
-            </select>
-            <label for="message">Message</label>
-            <input type="text" value="optional">
-            <input type="submit" value="Continue">
-        </form>
+        <a href="index.html" class="btn">Back</a>
+        <div>
+            <h1>Send coinz</h1>
+        </div>
+        <div class="sendCoinz-form">
+            <form action="index.html">
+                <label for="to">To</label>
+                <input type="text">
+                <label for="amount">Amount of Coinz</label>
+                <input type="number">
+                <label for="reason">Reason</label>
+                <select id="reason" name="reason">
+                    <option value="teamwork">Teamwork &#128540;</option>
+                    <option value="extramile">Going the extra mile &#128076;</option>
+                    <option value="helping">Helping out &#128519;</option>
+                    <option value="other">Other &#129500;</option>
+                </select><br><br>
+                <label for="message">Message</label>
+                <input type="text" value="(optional)">
+                <input type="submit" value="Confirm" class="btn-second">
+                <a href="index.html" class="btn-cancel">Cancel</a>
+            </form>
+        </div>
     </div>
-    <a href="index.html" class="btn-second">Confirm</a>
-    <a href="index.html" class="btn">Cancel</a>
 </body>
 </html>

@@ -1,0 +1,32 @@
+.sendCoinz {
+    margin: 25px;
+}
+
+input[value="(optional)"]{
+    color: grey;
+}
+
+input {
+    width: 100%;
+    padding: 10px; 
+    margin: 10px 0px 15px 0px;
+}
+
+.sendCoinz-form {
+    background-color: $yellow;
+    padding: 15px;
+    font-family: $h2font;
+    font-weight: 600;
+}
+
+.btn-second {
+    margin: 10px 0px;
+    align-content: center;
+}
+
+.btn-cancel {
+    padding: 10px;
+    margin: 0px 0px 0px 10px;
+    background-color: $green;
+    align-content: center;
+}

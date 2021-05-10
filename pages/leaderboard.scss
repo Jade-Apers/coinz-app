@@ -1,15 +1,15 @@
-.leaderboard {
+.leaderboard-grid {
     display: grid;
-    grid-template-columns: 60% 40%;
+    grid-template-columns: 70% 30%;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    background-color: $yellow;
+    background-color: $lila;
     padding: 20px;
     align-items: center;
     justify-content: center;
 }
 
 .leaderboard__name {
-    background-color: $lila;
+    background-color: $yellow;
     padding: 10px;
     margin: 15px 0px 15px 0px;
 }
@@ -19,4 +19,8 @@
     color: white;
     padding: 10px;
     margin: 15px 0px 15px 0px;
+}
+
+.leaderboard {
+    margin: 25px;
 }
