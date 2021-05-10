@@ -82,6 +82,60 @@ nav {
   padding: 25px;
 }
 
+h1 {
+  font-family: "rubik";
+  font-weight: 800;
+  color: blue;
+  text-align: center;
+}
+
+h2 {
+  font-family: "roboto mono";
+  color: #000aff;
+  text-align: center;
+}
+
+body {
+  background-color: #d7dbff;
+  font-family: "roboto";
+  color: #000aff;
+  text-align: center;
+}
+
+p {
+  color: black;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #33ff00;
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #000aff;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.btn-second {
+  background-color: #000aff;
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #fffcdd;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 25px;
+}
+
+a {
+  font-family: "roboto mono";
+  font-weight: 600;
+  color: #000aff;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -150,6 +204,10 @@ h1 {
 
 .btn-leaderboard {
   margin-top: 60px;
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {

@@ -1,4 +1,6 @@
 @import "../src/components/colors";
+@import "../src/components/btn";
+
 *{
     box-sizing: border-box;
 }
@@ -67,6 +69,12 @@ margin-bottom: -20px;
 .btn-leaderboard{
     margin-top: 60px;
 }
+
+a{
+    text-decoration: none;
+}
+
+
 
 
 
