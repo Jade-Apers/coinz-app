@@ -12,9 +12,19 @@ input {
     margin: 10px 0px 15px 0px;
 }
 
-.sendCoinz-form {
+.send-coinz__form {
     background-color: $yellow;
     padding: 15px;
     font-family: $h2font;
     font-weight: 600;
+    margin: 30px 50px 0px 50px;
+}
+
+@media (min-width: 1080px){
+
+    .send-coinz__form{
+        width: 500px;
+        margin: 70px auto auto auto;
+    }
+
 }
