@@ -1,0 +1,60 @@
+/*@import "../src/variables/colors";
+@import "../src/components/btn";*/
+
+*{
+    box-sizing: border-box;
+}
+
+.intro__picture{
+    clip-path: circle(80px at center);
+}
+
+.wallet{
+background-color: $yellow;
+padding: 5px;
+margin: 30px;
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+}
+
+.wallet__value{
+    margin-left: -50px;
+}
+
+.history__profilepic {
+    clip-path: circle(20px at center);
+}
+
+.wallet__line{
+margin-right: 30px;
+margin-left: 5px;
+}
+
+.wallet__send{
+    padding-top: 45px;
+}
+
+.history__received{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    background-color: $yellow;
+    margin: 30px;
+    padding: 0.5px; 
+    }
+
+.history__profilepic {
+    clip-path: circle(20px at center);
+}
+
+
+
+
+
+
+
+
+
+
+

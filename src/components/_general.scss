@@ -1,0 +1,47 @@
+@import "../variables/colors";
+@import "../variables/fonts";
+
+body{
+    background-color: $lila;
+}
+
+
+h1 {
+    font-family: $h1font;
+    font-weight: 800;
+    color: blue;
+    text-align: center;
+    font-size: 30px;
+}
+
+h2 {
+    font-family: $h2font;
+    color: $blue;
+    text-align: center;
+    font-size: 27px;
+}
+
+h3{
+    font-size: 40px;
+    margin-bottom: -15px;
+    font-size: 22px;
+}
+
+p{
+    color: $blue;
+    font-size: 16px;
+}
+
+body {
+    background-color: $lila;
+    font-family: $pfont;
+    color: $blue;
+    text-align: center;
+}
+
+a {
+    font-family: $h2font;
+    font-weight: 600;
+    color: $blue;
+    text-decoration: none;
+}

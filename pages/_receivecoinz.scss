@@ -2,11 +2,8 @@
     box-sizing: border-box;
 }
 
-body{
-    margin-top: 80px;
-}
 
-.transferred-names{
+.transfer{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,7 +11,7 @@ body{
     margin-top: 100px;
 }
 
-.yellow-box{
+.received-coinz{
     background-color: $yellow;
     width: 600px;
     height: 700px;
@@ -24,46 +21,30 @@ body{
 }
 
 
-.transferred-coinz{
+.transfer__coinz{
     background-color: white;
     padding: 1px 180px 1px 180px;
 }
 
-.transferred-names__image{
+.transfer__image{
     clip-path: circle(80px at center);
     margin-left: -40px;
     margin-right: -40px;
     margin-top: 70px;
 }
 
-.transferred-names__arrow{
+.transfer__arrow{
     margin-top: 70px; 
 }
 
-p{
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-}
-
-h2{
-    font-size: 20px;
-}
-
-h3{
-    font-size: 30px;
-    margin-bottom: 30px;
-    margin-top: -10px;
-}
-
-.transferred-reason{
+.transfer__reason{
     display: flex;
     justify-content: center;
     flex-direction: row;
     margin: 50px 0px 50px 0px;
 }
 
-.transferred-reason__reason{
+.transfer__reason__title{
     margin-right: 10px;
 }
 

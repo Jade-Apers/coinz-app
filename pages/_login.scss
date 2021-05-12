@@ -1,16 +1,12 @@
-.welcome {
+.login {
     text-align: center;
     margin: 50px;
 }
 
-.join {
+.login__form{
     background-color: $yellow;
     margin: 20px;
     padding: 20px;
-}
-
-a {
-    text-decoration: none;
 }
 
 input {

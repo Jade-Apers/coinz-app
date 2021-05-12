@@ -1,13 +1,12 @@
-//@use '../components/colors';
-//@use './colors';
-@import "../components/colors";
-@import "../components/headings";
+@import "../variables/colors";
+@import "../variables/fonts";
+
 
 *{
     box-sizing: border-box;
 }
 
-.btn {
+.btn--primary {
     background-color: $green;
     font-family: $h2font;
     font-weight: 600;
@@ -16,7 +15,7 @@
     text-decoration: none;
 }
 
-.btn-second {
+.btn--secondary {
     background-color: $blue;
     font-family: $h2font;
     font-weight: 600;
@@ -25,10 +24,12 @@
     text-decoration: none;
 }
 
-a {
-    font-family: $h2font;
-    font-weight: 600;
-    color: $blue;
+.btn--leaderboard{
+    margin: 80px 0px 80px 0px;
+    background-color: $green;
+    padding: 10px; 
+    width: 200px;
+    display: grid;
+    margin:auto;
 }
 
-//general
