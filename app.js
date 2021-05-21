@@ -9,6 +9,11 @@ const apiV1Transfersroutes = require('./routes/api/v1/transfers');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 
+const mongoose = require('mongoose');
+mongoose.set('useCreateIndex', true);
+mongoose.connect('mongodb://localhost:27017/coinzapp', {
+  useNewUrlParser: true, useUnifiedTopology: true});
+
 const app = express();
 
 // view engine setup

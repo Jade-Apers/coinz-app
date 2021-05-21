@@ -1,21 +1,37 @@
+const Coinz = require('../../../models/Coinz');
+
 const getAll = (req, res)=>{
     res.json({
         status: "success", 
         data:{
-            transfer:{
-                message: "received coins"
-            }
+            transfers: []
         }
     });
   }
 
-const create = (req, res) => {
-    res.json({
-        status: "success", 
-        data:{
-            transfer: []}      
-    });
+const create = (req, res, next) => {
+    let coin= new Coinz();
+    coin.text=req.body.text;
+    coin.user=req.body.user;
+    coin.coinz=req.body.coinz;
+    coin.save((err, doc)=>{
+        if(err){
+            res.json({
+                status: "error",
+                message: "Could not save this item"
+            })
+        }
+        if(!err){
+            res.json({
+                status:"success",
+                data:{
+                    "transfer": doc
+                }
+            });
+        }
+    })
 }
+
 
 const upload = (req, res) => {
     res.json({

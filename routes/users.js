@@ -7,10 +7,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
-router.post('/signup', (req, res,next)=>{
-//signup
-//username uit request halen
-//password uit request hale
-});
+router.post('/signup', authController.signup);
+router.post('/login', authController.login);
 
 module.exports = router;
