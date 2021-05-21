@@ -13,6 +13,7 @@
     "express": "~4.16.1",
     "gulp-less": "^4.0.1",
     "http-errors": "~1.6.3",
+    "mongodb": "^3.6.7",
     "morgan": "~1.9.1",
     "pug": "2.0.0-beta11",
     "sass": "^1.32.12"
