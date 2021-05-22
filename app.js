@@ -11,7 +11,7 @@ const usersRouter = require('./routes/users');
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
 mongoose.connect('mongodb://localhost:27017/coinzapp', {
-  useNewUrlParser: true, useUnifiedTopology: true});
+useNewUrlParser: true, useUnifiedTopology: true});
 
 const app = express();
 
@@ -48,3 +48,6 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
+
+/*send a coin with enter*/
+let input = document.querySelector(".")
