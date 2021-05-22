@@ -96,10 +96,6 @@ nav {
 .history__profilepic {
   clip-path: circle(20px at center); }
 
-.hidden{
-    visibility: hidden;
-}
-
 @media (min-width: 1080px) {
   .wallet {
     width: 500px;
