@@ -3,10 +3,11 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-const cors = require("cors");
+const cors = require('cors');
 const apiV1Transfersroutes = require('./routes/api/v1/transfers');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const passport= require('./passport/passport');
 
 const mongoose = require('mongoose');
 mongoose.set('useCreateIndex', true);
@@ -28,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/api/v1/transfers', apiV1Transfersroutes);
+app.use('/api/v1/transfers', passport.authenticate('jwt', { session: false }), apiV1Transfersroutes);
 
 
 // catch 404 and forward to error handler
