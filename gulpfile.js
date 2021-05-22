@@ -1,11 +1,23 @@
-const imagemin = require('gulp-imagemin');
-//const sourcemaps = require('gulp-sourcemaps');
 const sass = require('gulp-sass');
 sass.compiler = require('node-sass');
 const gulp = require('gulp');
-const { watch } = require('gulp');
+const { watch, src, dest, series } = require('gulp');
+const htmlmin = require('gulp-htmlmin');
+var cssmin = require('gulp-cssmin');
+var rename = require('gulp-rename');
 
-//var less = require('gulp-less')
+gulp.task('cssmin', async function () {
+    gulp.src('public/stylesheets/*.css')
+        .pipe(cssmin())
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('minify', async function (){
+	return gulp.src('public/*.html')
+	.pipe(htmlmin({ collapseWhitespace: true }))
+	.pipe(gulp.dest('dist/html'));
+});
 
 sass2css = function(){
     return src("./src/app.scss")
@@ -13,59 +25,11 @@ sass2css = function(){
    	.pipe(gulp.dest("./public/stylesheets"))
 }
 
-/*exports.imagemin = function(){
-    gulp.src('./src/images')
-    .pipe(imagemin())
-    .pipe(gulp.dest('./src/images'))
-}*/
+exports.default = function() {
+    watch("src/.scss", sass2css);
+}
 
-exports.default = () => (
-    watch("./src/**/*.scss", sass2css)
-);
-
-
-
-
-
-/*
-
-
-(async () => {
-	await imagemin(['images/*.png'], {
-		destination: 'build/images',
-		plugins: [
-			imageminOptipng()
-		]
-	});
-
-	console.log('Images optimized!');
-})();
-
-(async () => {
-	await imagemin(['images/*.jpg'], {
-		destination: 'build/images',
-		plugins: [
-			imageminMozjpeg()
-		]
-	});
-
-	console.log('Images optimized');
-})();
-
-(async () => {
-	await imagemin(['images/*.svg'], {
-		destination: 'build/images',
-		plugins: [
-			imageminSvgo({
-				plugins: extendDefaultPlugins([
-					{name: 'removeViewBox', active: false}
-				])
-			})
-		]
-	});
-
-	console.log('Images optimized');
-})();*/
+exports.sass2css = sass2css;
 
 
 
