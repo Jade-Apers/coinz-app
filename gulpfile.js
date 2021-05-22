@@ -6,41 +6,28 @@ const gulp = require('gulp');
 const { watch } = require('gulp');
 
 //var less = require('gulp-less')
-//var livereload = require('gulp-livereload');
 
 sass2css = function(){
     return src("./src/app.scss")
     .pipe(sass().on('error', sass.logError))
-   .pipe(dest("./dist"))
+   	.pipe(gulp.dest("./public/stylesheets"))
 }
 
-exports.imagemin = function(){
+/*exports.imagemin = function(){
     gulp.src('./src/images')
     .pipe(imagemin())
-    .pipe(gulp.dest('./dist/images'))
-}
+    .pipe(gulp.dest('./src/images'))
+}*/
 
 exports.default = () => (
     watch("./src/**/*.scss", sass2css)
 );
 
 
- 
- /*   gulp.task('less', function() {
-        gulp.src('less/*.less')
-          .pipe(less())
-          .pipe(gulp.dest('css'))
-          .pipe(livereload());
-      });
-       
-      gulp.task('watch', function() {
-        livereload.listen();
-        gulp.watch('less/*.less', ['less']);
-      });
 
 
 
-
+/*
 
 
 (async () => {
