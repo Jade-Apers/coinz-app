@@ -6,7 +6,8 @@ const coinzSchema = new Schema({
         required: true
     },
     user: String,
-    coinz: Number
+    coinz: Number,
+    completed: Boolean
 });
 
 const Coinz = mongoose.model('Coinz', coinzSchema);
