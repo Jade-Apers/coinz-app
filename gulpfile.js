@@ -32,6 +32,8 @@ var image= gulp.task ('image', async function(){
 		.pipe(gulp.dest('dist/img'));
 });
 
+/*
+
 gulp.task('watch', async function() {
 	gulp.watch("src/app.scss", sass2css);
 	gulp.watch("src/images/*", image)
@@ -44,7 +46,7 @@ exports.default = function() {
 exports.sass2css = sass2css;
 
 
-
+*/
 
 
 

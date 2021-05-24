@@ -11,5 +11,4 @@ const coinzSchema = new Schema({
 });
 
 const Coinz = mongoose.model('Coinz', coinzSchema);
-
 module.exports = Coinz;

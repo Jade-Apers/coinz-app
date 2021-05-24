@@ -1,48 +1,48 @@
 body {
-  background-color: #d7dbff; }
+  background-color: #d7dbff;
+}
 
 h1 {
   font-family: "rubik";
   font-weight: 800;
   color: blue;
   text-align: center;
-  font-size: 30px; }
+  font-size: 30px;
+}
 
 h2 {
   font-family: "roboto mono";
   color: #000aff;
   text-align: center;
-  font-size: 27px; }
+  font-size: 27px;
+}
 
 h3 {
   margin-bottom: -15px;
-  font-size: 22px; }
+  font-size: 22px;
+}
 
 p {
   color: #000aff;
-  font-size: 16px; }
+  font-size: 16px;
+}
 
 body {
   background-color: #d7dbff;
   font-family: "roboto";
   color: #000aff;
-  text-align: center; }
+  text-align: center;
+}
 
 a {
   font-family: "roboto mono";
   font-weight: 600;
   color: #000aff;
-  text-decoration: none; }
-
-* {
-  box-sizing: border-box; }
-
-  .hide {
-    display: none;
+  text-decoration: none;
 }
 
- .alert {
-    color: red;
+* {
+  box-sizing: border-box;
 }
 
 .btn--primary {
@@ -51,7 +51,8 @@ a {
   font-weight: 600;
   color: #000aff;
   padding: 10px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .btn--secondary {
   background-color: #000aff;
@@ -59,7 +60,8 @@ a {
   font-weight: 600;
   color: #fffcdd;
   padding: 10px;
-  text-decoration: none; }
+  text-decoration: none;
+}
 
 .btn--leaderboard {
   margin: 80px 0px 80px 0px;
@@ -67,17 +69,21 @@ a {
   padding: 10px;
   width: 200px;
   display: grid;
-  margin: auto; }
+  margin: auto;
+}
 
 nav {
   text-align: right;
-  padding: 25px; }
+  padding: 25px;
+}
 
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .intro__picture {
-  clip-path: circle(80px at center); }
+  clip-path: circle(80px at center);
+}
 
 .wallet {
   background-color: #fffcdd;
@@ -85,35 +91,43 @@ nav {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: baseline; }
+  align-items: baseline;
+}
 
 .wallet__line {
   width: 2px;
-  align-self: flex-end; }
+  align-self: flex-end;
+}
 
 .history__profilepic {
-  clip-path: circle(20px at center); }
+  clip-path: circle(20px at center);
+}
 
 .history__received {
   display: grid;
   grid-template-columns: 22% 78%;
   background-color: #fffcdd;
   margin: 10px 50px 10px 50px;
-  text-align: left; }
+  text-align: left;
+}
 
 .history__profilepic {
-  clip-path: circle(20px at center); }
+  clip-path: circle(20px at center);
+}
 
 @media (min-width: 1080px) {
   .wallet {
     width: 500px;
-    margin: auto; }
+    margin: auto;
+  }
+
   .history {
     width: 600px;
     margin: auto;
     text-align: center;
-    margin-bottom: 20px; } }
-
+    margin-bottom: 20px;
+  }
+}
 .leaderboard__grid {
   display: grid;
   grid-template-columns: 70% 30%;
@@ -121,60 +135,80 @@ nav {
   background-color: #d7dbff;
   padding: 20px;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .leaderboard__grid__name {
   background-color: #fffcdd;
   padding: 10px;
-  margin: 15px 0px 15px 0px; }
+  margin: 15px 0px 15px 0px;
+}
 
 .leaderboard__grid__score {
   background-color: #000aff;
   color: white;
   padding: 10px;
-  margin: 15px 0px 15px 0px; }
+  margin: 15px 0px 15px 0px;
+}
 
 .leaderboard {
-  margin: 25px; }
+  margin: 25px;
+}
 
 @media (min-width: 1080px) {
   .leaderboard__grid {
     width: 500px;
-    margin: auto; } }
-
+    margin: auto;
+  }
+}
 .login {
   text-align: center;
-  margin: 50px; }
+  margin: 50px;
+}
 
 .login__form {
   background-color: #fffcdd;
   margin: 20px;
-  padding: 20px; }
+  padding: 20px;
+}
 
 input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0px 10px 0px; }
+  margin: 10px 0px 10px 0px;
+}
 
 input[type=submit] {
   align-self: center;
   width: auto;
-  margin: 10px 0px; }
+  margin: 10px 0px;
+}
+
+.alert {
+  color: red;
+}
+
+.hide {
+  display: none;
+}
 
 @media (min-width: 1080px) {
   .login__form {
     margin: 60px auto auto auto;
-    width: 500px; } }
-
+    width: 500px;
+  }
+}
 * {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+}
 
 .received-coinz {
   background-color: #fffcdd;
   width: 430px;
   height: 450px;
   margin-top: 50px;
-  margin-left: 28px; }
+  margin-left: 28px;
+}
 
 .transfer {
   display: grid;
@@ -182,79 +216,107 @@ input[type=submit] {
   grid-template-rows: 200px 100px 3px 100px;
   justify-content: center;
   align-items: stretch;
-  justify-items: stretch; }
+  justify-items: stretch;
+}
 
 .transfer__image {
   clip-path: circle(50px at center);
   place-self: center;
-  grid-column: 0/3; }
+  grid-column: 0/3;
+}
 
 .transfer__arrow {
-  place-self: center; }
+  place-self: center;
+}
 
 .transfer__sender {
   grid-column: 1/4;
-  margin-top: -60px; }
+  margin-top: -60px;
+}
 
 .transfer__coinz {
   background-color: white;
   grid-column: 1/4;
-  margin-top: -60px; }
+  margin-top: -60px;
+}
 
 .transfer__reason {
   grid-column: 1/2;
   place-self: center;
-  justify-self: end; }
+  justify-self: end;
+}
 
 .transfer__reason-icon {
   grid-column: 2/3;
   place-self: center;
-  justify-self: center; }
+  justify-self: center;
+}
 
 .transfer__reason-title {
   grid-column: 3/4;
   place-self: center;
   justify-self: start;
-  margin-left: -50px; }
+  margin-left: -50px;
+}
 
 @media (min-width: 1080px) {
   .received-coinz {
     margin: auto;
-    margin-top: 60px; } }
-
+    margin-top: 60px;
+  }
+}
 .sendCoinz {
-  margin: 0px 30px 0px 0px; }
+  margin: 0px 30px 0px 0px;
+}
 
 input[value="(optional)"] {
-  color: grey; }
+  color: grey;
+}
 
 input {
   width: 100%;
   padding: 10px;
-  margin: 10px 0px 15px 0px; }
+  margin: 10px 0px 15px 0px;
+}
 
 .send-coinz__form {
   background-color: #fffcdd;
   padding: 15px;
   font-family: "roboto mono";
   font-weight: 600;
-  margin: 30px 50px 0px 50px; }
+  margin: 30px 50px 0px 50px;
+}
 
 @media (min-width: 1080px) {
   .send-coinz__form {
     width: 500px;
-    margin: 70px auto auto auto; } }
-
+    margin: 70px auto auto auto;
+  }
+}
 .signup {
   text-align: center;
-  margin: 50px; }
+  margin: 50px;
+}
 
 .signup__form {
   background-color: #fffcdd;
-  margin: 20px;
-  padding: 15px; }
+  margin: 150px;
+  padding: 15px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+.alert {
+  color: red;
+}
 
 @media (min-width: 1080px) {
   .signup__form {
-    margin: 60px auto auto auto;
-    width: 500px; } }
+    margin: 70px auto auto auto;
+    width: 500px;
+  }
+}
+
+/*# sourceMappingURL=app.css.map */

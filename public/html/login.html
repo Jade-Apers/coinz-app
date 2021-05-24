@@ -18,20 +18,20 @@
         <p>Join us today and receive 100 coinz for free!</p>
     <div class="login__form">
         <h2>Login</h2>
+        <form action="index.html" class="login__fields">
+        <p class="hide alert">Oops... something went wrong! Please try again.</p>
         <div>
-            <form action="index.html">
-                <label for="username">Username or Email address</label>
-                <input type="text">
-                <label for="password">Password</label>
-                <input type="password">
-                <input type="submit" value="Continue" class="btn--primary">
-            </form>
+            <label for="username">Username</label>
+            <input type="text" class="username">
+            <label for="password">Password</label>
+            <input type="password" class="password">
+            <input type="submit" value="Continue" class="btnlogin btn--primary">
         </div>
+        </form>
         <div>
             <a href="signup.html">Need an account? Sign up!</a>
         </div>
     </div>
 </div>
-<script src="/public/javascripts/coinz.js"></script>
 </body>
 </html>

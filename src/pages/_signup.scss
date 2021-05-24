@@ -5,14 +5,15 @@
 
 .signup__form {
     background-color: $yellow;
-    margin: 20px;
+    margin: 150px;
     padding: 15px;
 }
+
 
 @media (min-width: 1080px){
 
 .signup__form{
-    margin: 60px auto auto auto;
+    margin: 70px auto auto auto;
     width: 500px;
 }
 }

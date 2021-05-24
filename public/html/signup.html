@@ -20,21 +20,20 @@
     <div class="signup__form">
         <h2>Sign up</h2>
         <div>
-            <p class="alert hidden">Oops.. something went wrong</p>
-            <form action="index.html">
+            <form action="index.html" class="signup__fields">
+            <p class="alert hide">Oops.. something went wrong! Gebruik je mailadres van Thomas More.</p>
+            <div>   
                 <label for="email">Email address</label>
-                <input type="text" name="email" id="email">
-                <label for="username">Username</label>
-                <input type="text" name="username" id="username">
+                <input type="text" name="email" class="email">
+                <label for="lastname">Username</label>
+                <input type="text" name="username" class="username">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password">
-                <label for="password">Confirm password</label>
-                <input type="password" name="password" id="password">
-                <button class="signup button btn--primary">Let's go</button>
+                <input type="password" name="password" class="password">
+                <input type="submit" class= "btnsignup btn--primary"></button>
+            </div>
             </form>
         </div>
         <a href="login.html">Already have an account? Login!</a>
     </div>
-    <script src="/public/javascripts/coinz.js"></script>
-</body>
+   </body>
 </html>

@@ -21,6 +21,15 @@ input[type=submit] {
     margin: 10px 0px;
 }
 
+.hide {
+    display: none;
+}
+
+.alert {
+    color: red;
+}
+
+
 @media (min-width: 1080px){
 
     .login__form{
