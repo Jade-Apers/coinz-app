@@ -1,19 +1,29 @@
 const Coinz = require('../../../models/Coinz');
 
+//forgotten
 const getAll = (req, res)=>{
-    res.json({
-        status: "success", 
-        data:{
-            transfers: []
-        }
+    Todo.find({
+        "user": "Joris"
+    }, (err, docs) =>{
+        if(!err){
+            res.json({
+                "status": "success", 
+                "data":{
+                    "transfers": docs
+                }
+            });
+        }  
     });
-  }
+}
+   
 
-const create = (req, res, next) => {
+const create = (req, res) => {
     let coin= new Coinz();
     coin.text=req.body.text;
-    coin.user=req.body.user;
+    coin.user=req.body.lastname;
+    coin.user=req.body.firstname;
     coin.coinz=req.body.coinz;
+    coin.completed=req.body.completed;
     coin.save((err, doc)=>{
         if(err){
             res.json({
