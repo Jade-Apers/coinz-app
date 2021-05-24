@@ -12,7 +12,8 @@ const getAll = (req, res)=>{
 const create = (req, res, next) => {
     let coin= new Coinz();
     coin.text=req.body.text;
-    coin.user=req.body.user;
+    coin.user=req.body.lastname;
+    coin.user=req.body.firstname;
     coin.coinz=req.body.coinz;
     coin.save((err, doc)=>{
         if(err){

@@ -12,7 +12,8 @@ const signup = async (req, res, next)=>{
     await user.setPassword(password);
     await user.save().then(result =>{
 
-        console.log(result);
+        console.log(result._id);
+
         let token= jwt.sign({
             uid: result._id,
             username: result.username
@@ -28,12 +29,13 @@ const signup = async (req, res, next)=>{
         
     }).catch(error =>{
         res.json({
-            status:"error"
+            "status":"error"
         })
     });
 };
 
 const login= async(req, res, next) =>{
+
     const user = await User.authenticate()(req.body.username, req.body.password).then(result =>{
         res.json({
             "status": "success",
@@ -48,6 +50,7 @@ const login= async(req, res, next) =>{
             })
 
         });
+
     };
 
 module.exports.signup = signup;

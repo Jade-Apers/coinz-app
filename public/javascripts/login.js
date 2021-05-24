@@ -1,7 +1,6 @@
-var btn = document.querySelector(".btnlogin");
-btn.addEventListener("click", (e) => {
-        var username= document.querySelector('#mailadres').value;
-        var password = document.querySelector('#password').value;
+var btnLogin = document.querySelector(".btnlogin").addEventListener("submit", (e) => {
+        var username= document.querySelector('.username').value;
+        var password = document.querySelector('.password').value;
         
     fetch('http://localhost:3000/users/login', {
         method: "post",
@@ -16,19 +15,22 @@ btn.addEventListener("click", (e) => {
         return response.json();
     }).then(json =>{
         if(json.status === "success"){
-            let feedback = document.querySelector(".alert");
-            feedback.textContent= "Login complete!";
-            feedback.classList.remove('hide');
-
             let token= json.data.token;
             localStorage.setItem("token", token);
             window.location.href="index.html";
+
+        } else{
+            let feedback = document.querySelector(".alert");
+            feedback.textContent="Login failed buddy.";
+            feedback.classList.remove('hidden');
+            window.location.href="login.html";
+           
         }
     })
-
-    e.preventDefault();
-    
 });
+
+
+
 
 // login verification
 /*
