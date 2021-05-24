@@ -1,4 +1,4 @@
-var btnLogin = document.querySelector(".btnlogin").addEventListener("submit", (e) => {
+var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e) => {
         var username= document.querySelector('.username').value;
         var password = document.querySelector('.password').value;
         
@@ -22,9 +22,8 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("submit", (e
         } else{
             let feedback = document.querySelector(".alert");
             feedback.textContent="Login failed buddy.";
-            feedback.classList.remove('hidden');
+            feedback.classList.remove('hide');
             window.location.href="login.html";
-           
         }
     })
 });
