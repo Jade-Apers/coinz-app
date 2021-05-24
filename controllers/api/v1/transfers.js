@@ -1,5 +1,6 @@
 const Coinz = require('../../../models/Coinz');
 
+//forgotten
 const getAll = (req, res)=>{
     Todo.find({
         "user": "Joris"
