@@ -1,1 +1,1 @@
-web: node \public\html\index.html
+web: node index.html
