@@ -1,4 +1,4 @@
-const { tree } = require('gulp');
+/*const { tree } = require('gulp');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
@@ -24,4 +24,4 @@ const coinzSchema = new Schema({
 });
 
 const Coinz = mongoose.model('Coinz', coinzSchema);
-module.exports = Coinz;
+module.exports = Coinz;*/

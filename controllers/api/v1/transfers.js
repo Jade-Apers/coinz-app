@@ -1,4 +1,15 @@
-const Coinz = require('../../../models/Coinz');
+//const Coinz = require('../../../models/Coinz');
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+const coinzSchema = new Schema({
+   user: String,
+   coinz: Number,
+   reason: String,
+   message: String,
+   completed: Boolean
+})
+
+const Coinz = mongoose.model('Coinz', coinzSchema);
 
 //forgotten
 const getAll = (req, res)=>{
@@ -20,21 +31,22 @@ const getAll = (req, res)=>{
 const create = (req, res) => {
     let coin= new Coinz();
     coin.text=req.body.text;
-    coin.user=req.body.lastname;
-    coin.user=req.body.firstname;
+    coin.user=req.body.user;
     coin.coinz=req.body.coinz;
     coin.completed=req.body.completed;
+    coin.message = req.body.message;
+
     coin.save((err, doc)=>{
         if(err){
             res.json({
-                status: "error",
-                message: "Could not save this item"
+                "status": "error",
+                "message": "Could not save this item"
             })
         }
         if(!err){
             res.json({
-                status:"success",
-                data:{
+                "status":"success",
+                "data":{
                     "transfer": doc
                 }
             });
