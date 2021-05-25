@@ -1,19 +1,8 @@
-//const Coinz = require('../../../models/Coinz');
-const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
-const coinzSchema = new Schema({
-   user: String,
-   coinz: Number,
-   reason: String,
-   message: String,
-   completed: Boolean
-})
-
-const Coinz = mongoose.model('Coinz', coinzSchema);
+const Coinz = require('../../../models/Coinz');
 
 //forgotten
 const getAll = (req, res)=>{
-    Todo.find({
+    Coinz.find({
         "user": "Joris"
     }, (err, docs) =>{
         if(!err){
@@ -26,14 +15,14 @@ const getAll = (req, res)=>{
         }  
     });
 }
-   
 
 const create = (req, res) => {
     let coin= new Coinz();
     coin.text=req.body.text;
     coin.user=req.body.user;
     coin.coinz=req.body.coinz;
-    coin.completed=req.body.completed;
+    coin.reason=req.body.reason;
+    coin.completed=false;
     coin.message = req.body.message;
 
     coin.save((err, doc)=>{

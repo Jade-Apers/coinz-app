@@ -23,7 +23,6 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
             let feedback = document.querySelector(".alert");
             feedback.textContent="Login failed buddy.";
             feedback.classList.remove('hide');
-            window.location.href="login.html";
         }
     })
 });

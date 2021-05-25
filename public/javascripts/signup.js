@@ -1,4 +1,4 @@
-let btnSignup = document.querySelector('.btnsignup .btn--primary').addEventListener("click", (e) => {
+let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
 let email= document.querySelector('.email').value;
 let password = document.querySelector('.password').value;
 let username = document.querySelector('.username').value;
