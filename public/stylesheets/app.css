@@ -37,14 +37,6 @@ a {
 * {
   box-sizing: border-box; }
 
-  .hide {
-    display: none;
-}
-
- .alert {
-    color: red;
-}
-
 .btn--primary {
   background-color: #33ff00;
   font-family: "roboto mono";
@@ -161,6 +153,12 @@ input[type=submit] {
   width: auto;
   margin: 10px 0px; }
 
+.hide {
+  display: none; }
+
+.alert {
+  color: red; }
+
 @media (min-width: 1080px) {
   .login__form {
     margin: 60px auto auto auto;
@@ -251,10 +249,10 @@ input {
 
 .signup__form {
   background-color: #fffcdd;
-  margin: 20px;
+  margin: 150px;
   padding: 15px; }
 
 @media (min-width: 1080px) {
   .signup__form {
-    margin: 60px auto auto auto;
+    margin: 70px auto auto auto;
     width: 500px; } }
