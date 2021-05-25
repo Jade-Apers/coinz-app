@@ -13,7 +13,7 @@ const coinzSchema = new Schema({
     },
     user: {
         type: String,
-        enum: [true, 'Thomas More email address required'],
+        required: [true, 'Thomas More email address required'],
         unique: true,
         coinz: Number 
     },
