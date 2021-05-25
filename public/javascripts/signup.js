@@ -1,4 +1,4 @@
-let btnSignup = document.querySelector('.btnsignup .btn--primary').addEventListener("click", (e) => {
+let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
 let email= document.querySelector('.email').value;
 let password = document.querySelector('.password').value;
 let username = document.querySelector('.username').value;
@@ -17,6 +17,8 @@ fetch('http://localhost:3000/users/signup', {
     return response.json();
 }).then(json =>{
     if(json.status === "success") {
+console.log(token);
+
         let feedback = document.querySelector(".alert");
         feedback.textContent= "Sign up complete!";
         feedback.classList.remove('hide');
