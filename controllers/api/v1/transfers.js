@@ -1,10 +1,4 @@
-//const Coinz = require('../../../models/Coinz');
-const mongoose= require('mongoose');
-const Schema= mongoose.Schema;
-const todoSchema= new Schema({
-    firstname
-})
-
+const Coinz = require('../../../models/Coinz');
 
 //forgotten
 const getAll = (req, res)=>{
