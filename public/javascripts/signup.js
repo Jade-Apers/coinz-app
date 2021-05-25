@@ -2,7 +2,6 @@ var btn = document.querySelector(".btnsignup").addEventListener("click", (e) => 
     var email= document.querySelector('#email').value;
     var password = document.querySelector('#password').value;
     var username = document.querySelector('#firstname').value;
-    var lastname = document.querySelector('#lastname').value;
     
 fetch('http://localhost:3000/users/signup', {
     method: "post",
@@ -13,7 +12,6 @@ fetch('http://localhost:3000/users/signup', {
         "email": email,
         "username": username,
         "password":password,
-        "lastname":lastname
     })
 }).then(response =>{
     return response.json();
