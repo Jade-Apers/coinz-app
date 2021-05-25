@@ -1,8 +1,8 @@
 const Coinz = require('../../../models/Coinz');
 
 const getAll = (req, res)=>{
-    Todo.find({
-        "user": "Joris"
+    Coinz.find({
+        "user": req.user._id
     }, (err, docs) =>{
         if(!err){
             res.json({
@@ -14,34 +14,32 @@ const getAll = (req, res)=>{
         }  
     });
 }
-   
 
-const create = (req, res) => {
+const create = (req, res, next) => {
     let coin= new Coinz();
     coin.text=req.body.text;
-    coin.user=req.body.lastname;
-    coin.user=req.body.firstname;
+    coin.user=req.body.user;
+    coin.reason = req.body.reason;
+    coin.message= req.body.message;
     coin.coinz=req.body.coinz;
-    coin.completed=req.body.completed;
+    coin.completed=false;
     coin.save((err, doc)=>{
         if(err){
             res.json({
-                status: "error",
-                message: "Could not save this item"
+                "status": "error",
+                "message": "Could not save this item"
             })
         }
         if(!err){
             res.json({
-                status:"success",
-                data:{
+                "status":"success",
+                "data":{
                     "transfer": doc
                 }
             });
         }
     })
-    
 }
-
 
 const upload = (req, res) => {
     res.json({
@@ -63,8 +61,8 @@ const status = (req, res) => {
 
 const update = (req, res) => {
     let user = req.user._id;
-    let todoId = req.params.id;
-    Todo.findOneAndUpdate({
+    let coinzId = req.params.id;
+    Coinz.findOneAndUpdate({
         user: user,
         _id: coinz
     }, {
@@ -75,7 +73,7 @@ const update = (req, res) => {
         res.json({
             "status": "success",
             "data": {
-                todo: doc
+                transfers: docs
             }
         })
     }).catch(err => {
