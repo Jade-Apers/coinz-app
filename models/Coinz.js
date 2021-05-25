@@ -1,13 +1,26 @@
+const { tree } = require('gulp');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
+
 const coinzSchema = new Schema({
-    text: {
+    firstname: {
         type: String,
-        required: true
+        required: [true, 'Please fill in your firstname']
     },
-    user: String,
-    coinz: Number,
-    completed: Boolean
+    lastname: {
+        type: String, 
+        required: [true, 'Please fill in your lastname']
+    },
+    user: {
+        type: String,
+        enum: [true, 'Thomas More email address required'],
+        unique: true,
+        coinz: Number 
+    },
+    password: {
+        type: String, 
+        required: true 
+    }
 });
 
 const Coinz = mongoose.model('Coinz', coinzSchema);
