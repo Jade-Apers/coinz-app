@@ -1,7 +1,7 @@
-var btn = document.querySelector(".btnsignup").addEventListener("click", (e) => {
-    var email= document.querySelector('#email').value;
-    var password = document.querySelector('#password').value;
-    var username = document.querySelector('#firstname').value;
+let btnSignup = document.querySelector('.btnsignup .btn--primary').addEventListener("click", (e) => {
+let email= document.querySelector('.email').value;
+let password = document.querySelector('.password').value;
+let username = document.querySelector('.username').value;
     
 fetch('http://localhost:3000/users/signup', {
     method: "post",
@@ -11,24 +11,25 @@ fetch('http://localhost:3000/users/signup', {
     body: JSON.stringify({
         "email": email,
         "username": username,
-        "password":password,
+        "password": password
     })
 }).then(response =>{
     return response.json();
 }).then(json =>{
-    if(json.status === "success"){
+    if(json.status === "success") {
         let feedback = document.querySelector(".alert");
         feedback.textContent= "Sign up complete!";
         feedback.classList.remove('hide');
-
+        
         let token= json.data.token;
-            localStorage.setItem("token", token);
-            window.location.href="index.html";
+        localStorage.setItem("token", token);
+        window.location.href="index.html";
     }
-})
 
-
+    });
 });
+
+
   
   
   //signup verification
@@ -62,4 +63,5 @@ fetch('http://localhost:3000/users/signup', {
   
         document.querySelector(".signup__form").classList.add("hide");
   
-    }*/
+    }
+    */

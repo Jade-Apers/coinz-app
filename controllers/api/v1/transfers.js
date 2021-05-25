@@ -2,6 +2,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 const coinzSchema = new Schema({
+<<<<<<< HEAD
     user: String,
     coinz: Number,
     reason: String, 
@@ -9,34 +10,58 @@ const coinzSchema = new Schema({
     completed: Boolean
 });
 
+=======
+   user: String,
+   coinz: Number,
+   reason: String,
+   message: String,
+   completed: Boolean
+})
+>>>>>>> 78c4436906d37acd6a142c94e7bdffdb49c9a353
 
+const Coinz = mongoose.model('Coinz', coinzSchema);
+
+//forgotten
 const getAll = (req, res)=>{
-    res.json({
-        status: "success", 
-        data:{
-            transfers: []
-        }
+    Todo.find({
+        "user": "Joris"
+    }, (err, docs) =>{
+        if(!err){
+            res.json({
+                "status": "success", 
+                "data":{
+                    "transfers": docs
+                }
+            });
+        }  
     });
-  }
+}
+   
 
-const create = (req, res, next) => {
+const create = (req, res) => {
     let coin= new Coinz();
     coin.user=req.body.user;
     coin.coinz=req.body.coinz;
+<<<<<<< HEAD
     coin.reason=req.body.reason;
     coin.message=req.body.message;
     coin.completed=req.body.completed;
+=======
+    coin.completed=req.body.completed;
+    coin.message = req.body.message;
+
+>>>>>>> 78c4436906d37acd6a142c94e7bdffdb49c9a353
     coin.save((err, doc)=>{
         if(err){
             res.json({
-                status: "error",
-                message: "Could not save this item"
+                "status": "error",
+                "message": "Could not save this item"
             })
         }
         if(!err){
             res.json({
-                status:"success",
-                data:{
+                "status":"success",
+                "data":{
                     "transfer": doc
                 }
             });

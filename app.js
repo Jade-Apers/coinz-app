@@ -50,5 +50,8 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
+<<<<<<< HEAD
 /*send a coin with enter*/
 //let input = document.querySelector(".")
+=======
+>>>>>>> 78c4436906d37acd6a142c94e7bdffdb49c9a353
