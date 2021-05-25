@@ -1,4 +1,4 @@
-let btnSignup = document.querySelector('btnsignup btn--primary').addEventListener("click", (e) => {
+let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
 let email= document.querySelector('.email').value;
 let password = document.querySelector('.password').value;
 let username = document.querySelector('.username').value;
@@ -11,7 +11,7 @@ fetch('http://localhost:3000/users/signup', {
     body: JSON.stringify({
         "email": email,
         "username": username,
-        "password":password
+        "password": password
     })
 }).then(response =>{
     return response.json();

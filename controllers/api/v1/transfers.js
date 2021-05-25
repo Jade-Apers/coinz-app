@@ -8,7 +8,7 @@ const todoSchema= new Schema({
 
 //forgotten
 const getAll = (req, res)=>{
-    Todo.find({
+    Coinz.find({
         "user": "Joris"
     }, (err, docs) =>{
         if(!err){
@@ -21,26 +21,27 @@ const getAll = (req, res)=>{
         }  
     });
 }
-   
 
 const create = (req, res) => {
     let coin= new Coinz();
     coin.text=req.body.text;
-    coin.user=req.body.lastname;
-    coin.user=req.body.firstname;
+    coin.user=req.body.user;
     coin.coinz=req.body.coinz;
-    coin.completed=req.body.completed;
+    coin.reason=req.body.reason;
+    coin.completed=false;
+    coin.message = req.body.message;
+
     coin.save((err, doc)=>{
         if(err){
             res.json({
-                status: "error",
-                message: "Could not save this item"
+                "status": "error",
+                "message": "Could not save this item"
             })
         }
         if(!err){
             res.json({
-                status:"success",
-                data:{
+                "status":"success",
+                "data":{
                     "transfer": doc
                 }
             });
