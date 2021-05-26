@@ -36,6 +36,8 @@ gulp.task ('image', async function(){
 gulp.task('watch', function(){
 	gulp.watch('src/**/*.scss', gulp.series('sass2css'));
 	gulp.watch('src/images/*', gulp.series('image'));
+	gulp.watch('public/html/*.html', gulp.series('minify'));
+	gulp.watch('public/stylesheets/*.css', gulp.series('cssmin'));
 });
 
 gulp.task('default', gulp.parallel('sass2css', 'minify', 'image', 'cssmin', 'watch'));

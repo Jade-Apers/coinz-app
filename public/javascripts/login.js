@@ -2,7 +2,7 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
         var username= document.querySelector('.username').value;
         var password = document.querySelector('.password').value;
         
-    fetch('http://localhost:3000/users/login', {
+    fetch('/users/login', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
