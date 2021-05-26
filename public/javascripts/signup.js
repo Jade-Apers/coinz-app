@@ -1,7 +1,7 @@
 let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
-let email= document.querySelector('.email').value;
-let password = document.querySelector('.password').value;
-let username = document.querySelector('.username').value;
+    let email= document.querySelector('.email').value;
+    let password = document.querySelector('.password').value;
+    let username = document.querySelector('.username').value;
     
 fetch('/users/signup', {
     method: "post",
@@ -25,7 +25,6 @@ fetch('/users/signup', {
         localStorage.setItem("token", token);
         window.location.href="index.html";
     }
-
     });
 });
 
