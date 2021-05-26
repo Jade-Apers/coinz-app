@@ -30,8 +30,6 @@ let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (
     });
     
     
-      
-      
       //signup verification
     /*
       let formSignup = document.querySelector(".signup__fields");
