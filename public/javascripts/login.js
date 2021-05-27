@@ -2,7 +2,7 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
         var username= document.querySelector('.username').value;
         var password = document.querySelector('.password').value;
         
-    fetch('/users/login', {
+    fetch('http://localhost:3000/users/login', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
@@ -16,7 +16,7 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
     }).then(json =>{
         if(json.status === "success"){
             let token= json.data.token;
-            localStorage.setItem("token", token);
+            localStorage.getItem("token", token);
             window.location.href="index.html";
 
         } else{
@@ -26,9 +26,6 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
         }
     })
 });
-
-
-
 
 // login verification
 /*

@@ -1,9 +1,9 @@
-let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
+    let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (e) => {
     let email= document.querySelector('.email').value;
     let password = document.querySelector('.password').value;
     let username = document.querySelector('.username').value;
         
-    fetch('/users/signup', {
+    fetch('http://localhost:3000/users/signup', {
         method: "post",
         headers: {
             'Content-Type': 'application/json'
@@ -13,6 +13,7 @@ let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (
             "username": username,
             "password": password
         })
+
     }).then(response =>{
         return response.json();
     }).then(json =>{
@@ -25,7 +26,6 @@ let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (
             localStorage.setItem("token", token);
             window.location.href="index.html";
         }
-    
         });
     });
     
