@@ -8,7 +8,7 @@ var cssmin = require('gulp-cssmin');
 var rename = require('gulp-rename');
 
 gulp.task('cssmin', async function () {
-    gulp.src('public/stylesheets/*.css')
+    return gulp.src('public/stylesheets/*.css')
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest('dist/css'));
@@ -27,7 +27,7 @@ gulp.task ('sass2css', async function(){
 });
 
 gulp.task ('image', async function(){
-	gulp.src('src/images/*')
+	return gulp.src('src/images/*')
 		.pipe(imagemin())
 		.pipe(gulp.dest('dist/img'));
 });

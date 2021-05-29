@@ -35,7 +35,6 @@ const signup = async (req, res, next)=>{
 };
 
 const login= async(req, res, next) =>{
-
     console.log(req.body);
 
     const user = await User.authenticate()(req.body.username, req.body.password).then(result =>{
