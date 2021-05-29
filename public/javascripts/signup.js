@@ -17,18 +17,30 @@ let thomasmore= email.indexOf("@student.thomasmore.be");
        let labelEmail=document.querySelector("#email");
        labelEmail.classList.add("alert");
        labelEmail.innerHTML="Email address: gebruik je Thomas More mailadres";
-        }
+       setTimeout(()=>{
+        labelEmail.classList.remove("alert");
+        labelEmail.innerHTML="Email address";
+    }, 4000)
+    }
 
     else if (username === "") {
-        let labelEmail=document.querySelector("#username");
-        labelEmail.classList.add("alert");
-        labelEmail.innerHTML="Username: Vul dit veld in";
+        let labelUsername=document.querySelector("#username");
+        labelUsername.classList.add("alert");
+        labelUsername.innerHTML="Username: Vul dit veld in";
+        setTimeout(()=>{
+            labelUsername.classList.remove("alert");
+            labelUsername.innerHTML="Username";
+        }, 4000)
     }
      
     else if (password === "") {
-        let labelEmail=document.querySelector("#password");
-        labelEmail.classList.add("alert");
-        labelEmail.innerHTML="Password: Vul dit veld in";
+        let labelPassword=document.querySelector("#password");
+        labelPassword.classList.add("alert");
+        labelPassword.innerHTML="Password: Vul dit veld in";
+        setTimeout(()=>{
+            labelPassword.classList.remove("alert");
+            labelPassword.innerHTML="Password";
+        }, 4000)
     }
 
     else {    
@@ -47,8 +59,11 @@ let thomasmore= email.indexOf("@student.thomasmore.be");
             }).then(json =>{
                 if(json.status === "error"){
                    let feedback = document.querySelector(".alert");
-                   feedback.textContent= "Sign up failed. Please try again!";
+                   feedback.textContent= "Sign up failed, my friend. Please try again!";
                    feedback.classList.remove('hide');
+                   setTimeout(()=>{
+                    feedback.classList.add("hide");
+                }, 4000)
                 }
 
                 else if (json.status === "success") {
