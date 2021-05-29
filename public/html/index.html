@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
+    <script>
+        let token = localStorage.getItem("token");
+        if(!token){
+            window.location.href = "login.html";
+        }
+    </script>
     <nav>
         <a href="login.html" class="btn--primary">Logout</a>
     </nav>
@@ -33,6 +39,5 @@
     </div>
     <div class="btn--leaderboard"><a href="leaderboard.html">Check leaderboard</a></div>
     <script src="../javascripts/signup.js"></script>
-
 </body>
 </html>

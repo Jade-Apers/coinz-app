@@ -5,7 +5,7 @@ const Schema = mongoose.Schema;
 const coinzSchema = new Schema({
 
     user: {
-        type: String,
+        type: Object,
         required: true
     },
     coinz: {

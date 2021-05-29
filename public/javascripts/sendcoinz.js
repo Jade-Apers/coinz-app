@@ -1,27 +1,34 @@
+
 //send a coin with enter
-let input = document.querySelector(".btn--primary btnsendcoinz").addEventListener("click", (e)=>{
-  let text = input.value;
+const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("click", (e)=>{
+  var user = document.querySelector(".form__to").value;
+  const coinz = document.querySelector(".form__amountcoinz").value;
+  const reason = document.querySelector(".form__reason").value;
+  const message = document.querySelector(".form__message").value;
+  
   fetch('http://localhost:3000/api/v1/transfers',{
     method:"post",
     'headers':{
-      'Content-Type': 'application/json'
+      'Authorization': 'Bearer ' + localStorage.getItem('token')
     },
     body: JSON.stringify({
-      "text": text
+      "user" : user,
+      "coinz": coinz,
+      "reason" : reason,
+      "message" : message
     })
-  })
-  .then(result => {
-    return result.json();
+  }).then(response => {
+    return response.json();
   }).then(json => {
-   ` <a><div class="history">
-    <div class="history__received">
-    <a href="receivecoinz.html"><img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-    <a href="receivecoinz.html"> <p>Received  ${json.data.coinzs.coinz} coinz from ${json.data.users.username} </p> </a>
-    </div>`;
-    document.querySelector(".history").insertAdjacentHTML('afterend', transfer);
+    if(json.status === "success"){
+
+      window.location.href = "index.html"
+    } else{
+      let failed = document.querySelector(".form__alert");
+      failed.textContent="Transaction failed";
+      failed.classList.remove('hide');
+    }
   }).catch(err =>{
     console.log(err);
   })
-
-  e.preventDefault();
 });

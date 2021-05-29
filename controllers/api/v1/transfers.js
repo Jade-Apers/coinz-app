@@ -1,6 +1,5 @@
 const Coinz = require('../../../models/Coinz');
 
-//forgotten
 const getAll = (req, res)=>{
     Coinz.find({
         "user": "Joris"
@@ -16,14 +15,20 @@ const getAll = (req, res)=>{
     });
 }
 
-const create = (req, res, next) => {
+const create = (req, res) => {
+  /*  let senderId = getIdFromJWT(req);
+    if(!senderID){
+        return res.json({
+            "status": "error",
+            "message": "We haven't found the user in our database."
+        })
+    }*/
     let coin= new Coinz();
-    coin.text=req.body.text;
-    coin.user=req.body.user;
+    coin.user = req.body.user;
     coin.coinz=req.body.coinz;
     coin.reason=req.body.reason;
-    coin.completed=false;
     coin.message = req.body.message;
+    coin.completed = false;
 
     coin.save((err, doc)=>{
         if(err){
@@ -47,7 +52,7 @@ const upload = (req, res) => {
     res.json({
         status: "success", 
         data: {
-            message:"GET transfers" + req.query.user
+            message:"GET transfers" + req.query.username
         }
     });
 }
@@ -71,7 +76,7 @@ const update = (req, res) => {
         completed: true
     }, {
         new: true
-    }).then(doc => {
+    }).then(docs => {
         res.json({
             "status": "success",
             "data": {
