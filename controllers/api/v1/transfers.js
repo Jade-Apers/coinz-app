@@ -16,7 +16,7 @@ const getAll = (req, res)=>{
     });
 }
 
-//create a transaction
+//create a transaction huh
 const create = (req, res) => {
     let coin= new Coinz();
     coin.sender= req.body.sender;
