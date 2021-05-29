@@ -1,8 +1,8 @@
 {
-"Database":{
-    "conn": "mongodb+srv://coinzapp:07hWZQeKUK12ycbz@Cluster0.n9z04.mongodb.net/sample_mflix?retryWrites=true&w=majority"
+"Database": {
+    "conn": "mongodb://localhost:27017/coinzapp"
 },
-    "jwt":{
-        "secret": "MyVerySecretWord"
-    }
+"jwt":{
+    "secret": "MyVerySecretWord"
+}
 }
