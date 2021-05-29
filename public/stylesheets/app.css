@@ -106,28 +106,35 @@ nav {
     text-align: center;
     margin-bottom: 20px; } }
 
-.leaderboard__grid {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+.leaderboard__list {
+  display: flex;
+  flex-direction: row;
   background-color: #d7dbff;
   padding: 20px;
   align-items: center;
-  justify-content: center; }
+  justify-content: space-between; }
 
 .leaderboard__grid__name {
   background-color: #fffcdd;
-  padding: 10px;
+  padding: 10px 85px;
+  margin: 15px 0px 15px 0px; }
+
+.leaderboard__grid__rank {
+  padding: 10px 25px;
   margin: 15px 0px 15px 0px; }
 
 .leaderboard__grid__score {
   background-color: #000aff;
   color: white;
-  padding: 10px;
+  padding: 10px 45px;
   margin: 15px 0px 15px 0px; }
 
 .leaderboard {
   margin: 25px; }
+
+.leaderboard__grid {
+  margin: 150px;
+}
 
 @media (min-width: 1080px) {
   .leaderboard__grid {

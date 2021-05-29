@@ -1,4 +1,5 @@
 const Coinz = require('../../../models/Coinz');
+const User = require('../../../models/User');
 
 //forgotten
 const getAll = (req, res)=>{
@@ -60,7 +61,27 @@ const status = (req, res) => {
     });
 }
 
+const getLeaderboard = (req, res) => {
+    Coinz.find((err, docs) => {
+        if(err){
+            res.json({
+                "status":"error", 
+                "message": "could not find leaders"
+            })
+        }
+        if(!err){
+            res.json({
+                "status": "success", 
+                "data": {
+                    "coinz": docs
+            }            
+        }).sort({"coinz": -1});
+        }
+    });
+}
+
   module.exports.getAll = getAll;
   module.exports.create = create;
   module.exports.upload = upload;
   module.exports.status = status;
+  module.exports.getLeaderboard= getLeaderboard;

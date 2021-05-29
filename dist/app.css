@@ -45,7 +45,7 @@ a {
   box-sizing: border-box;
 }
 
-.btn--primary {
+.btn {
   background-color: #33ff00;
   font-family: "roboto mono";
   font-weight: 600;
@@ -56,17 +56,11 @@ a {
 
 .btn--secondary {
   background-color: #000aff;
-  font-family: "roboto mono";
-  font-weight: 600;
   color: #fffcdd;
-  padding: 10px;
-  text-decoration: none;
 }
 
 .btn--leaderboard {
   margin: 80px 0px 80px 0px;
-  background-color: #33ff00;
-  padding: 10px;
   width: 200px;
   display: grid;
   margin: auto;
@@ -128,14 +122,19 @@ nav {
     margin-bottom: 20px;
   }
 }
-.leaderboard__grid {
-  display: grid;
-  grid-template-columns: 70% 30%;
-  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+.leaderboard__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
   background-color: #d7dbff;
   padding: 20px;
-  align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.leaderboard__grid__rank {
+  background-color: #fffcdd;
+  padding: 10px;
+  margin: 15px 0px 15px 0px;
 }
 
 .leaderboard__grid__name {
@@ -146,7 +145,7 @@ nav {
 
 .leaderboard__grid__score {
   background-color: #000aff;
-  color: white;
+  color: red;
   padding: 10px;
   margin: 15px 0px 15px 0px;
 }
@@ -184,12 +183,12 @@ input[type=submit] {
   margin: 10px 0px;
 }
 
-.alert {
-  color: red;
-}
-
 .hide {
   display: none;
+}
+
+.alert {
+  color: red;
 }
 
 @media (min-width: 1080px) {
@@ -302,14 +301,6 @@ input {
   background-color: #fffcdd;
   margin: 150px;
   padding: 15px;
-}
-
-.hide {
-  visibility: hidden;
-}
-
-.alert {
-  color: red;
 }
 
 @media (min-width: 1080px) {
