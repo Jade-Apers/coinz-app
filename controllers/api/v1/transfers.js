@@ -113,4 +113,4 @@ const getLeaderboard = (req, res) => {
   module.exports.upload = upload;
   module.exports.status = status;
   module.exports.update = update;
-  module.exports.getLeaderboard= getLeaderboard;
+  module.exports.getLeaderboard = getLeaderboard;
