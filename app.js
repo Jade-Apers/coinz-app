@@ -8,12 +8,15 @@ const apiV1Transfersroutes = require('./routes/api/v1/transfers');
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const passport= require('./passport/passport');
+const config = require('config');
 
 const mongoose = require('mongoose');
 const e = require('express');
 mongoose.set('useCreateIndex', true);
-mongoose.connect('mongodb://localhost:27017/coinzapp', {
-useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect(process.env.dbconn || config.get('Database.conn'), {
+useNewUrlParser: true, useUnifiedTopology: true
+});
+
 
 const app = express();
 
@@ -50,4 +53,3 @@ app.use(function(err, req, res, next) {
 });
 
 module.exports = app;
-

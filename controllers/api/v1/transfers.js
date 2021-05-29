@@ -1,8 +1,9 @@
 const Coinz = require('../../../models/Coinz');
 
+//forgotten
 const getAll = (req, res)=>{
     Coinz.find({
-        "user": req.user._id
+        "user": "Joris"
     }, (err, docs) =>{
         if(!err){
             res.json({
@@ -19,10 +20,11 @@ const create = (req, res, next) => {
     let coin= new Coinz();
     coin.text=req.body.text;
     coin.user=req.body.user;
-    coin.reason = req.body.reason;
-    coin.message= req.body.message;
     coin.coinz=req.body.coinz;
+    coin.reason=req.body.reason;
     coin.completed=false;
+    coin.message = req.body.message;
+
     coin.save((err, doc)=>{
         if(err){
             res.json({

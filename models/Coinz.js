@@ -1,23 +1,24 @@
-const { Binary } = require('bson');
+const { tree } = require('gulp');
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const coinzSchema = new Schema({
-        text: {
-            type: String,
-            required: true
-        },
-        user: String,
-        completed: Boolean,
-        reason: {
-            type: String
-        },
-        coinz: {
-            type: Number
-        },
-        picture: {
-            type: String
-        }
 
+const coinzSchema = new Schema({
+
+    user: {
+        type: String,
+        required: true
+    },
+    coinz: {
+        type: Number,
+        required: true
+    },
+    reason: {
+        type: String,
+        required: true
+    },
+    
+   message: String,
+   completed: Boolean
 })
 
 const Coinz = mongoose.model('Coinz', coinzSchema);

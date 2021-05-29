@@ -16,20 +16,16 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
     }).then(json =>{
         if(json.status === "success"){
             let token= json.data.token;
-            localStorage.setItem("token", token);
+            localStorage.getItem("token", token);
             window.location.href="index.html";
 
         } else{
             let feedback = document.querySelector(".alert");
             feedback.textContent="Login failed buddy.";
             feedback.classList.remove('hide');
-            window.location.href="login.html";
         }
     })
 });
-
-
-
 
 // login verification
 /*
