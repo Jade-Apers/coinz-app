@@ -1,8 +1,8 @@
 {
-    "Database": {
-        "conn": "mongodb://localhost:27017/coinzapp"
-    }, 
-    "jwt":{
-        "secret":"MyVerySecretWord"
-    }
+"Database": {
+    "conn": "mongodb://localhost:27017/coinzapp"
+},
+"jwt":{
+    "secret": "MyVerySecretWord"
+}
 }

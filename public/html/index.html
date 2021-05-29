@@ -10,8 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
+<script>
+    let token = localStorage.getItem("token");
+    if(!token){
+        window.location.href = "login.html";
+    }
+</script>
 <body>
     <nav>
+        <a href="leaderboard.html" class="btn btn--secondary">Leaderboard</a>
         <a href="login.html" class="btn">Logout</a>
     </nav>
     <div>
@@ -23,10 +30,28 @@
             <h3>13,00 </h3>
             <p>coinz in your wallet</p>
         </div>
-       <div class="wallet__line"><img src="/src/images/line.svg" alt="lijn"> </div>
-        <div class="wallet__send">
-           <a href="sendcoinz.html" class="btn--secondary">Send</a> 
-           <p>money</p>
+    </div>
+
+     <div class="send-coinz"></div>
+        <div class="send-coinz__form">
+            <form class="form" action="#">
+                <label for="to">To</label>
+                <input type="text" class="form__to">
+                <label for="amount">Amount of Coinz</label>
+                <input type="number" class="form__amountcoinz">
+                <label for="reason">Reason</label>
+                <select name="reason" class="form__reason">
+                    <option class="form__reason__teamwork" value="teamwork">Teamwork &#128540;</option>
+                    <option class="form__reason__extramile" value="extramile">Going the extra mile &#128076;</option>
+                    <option class="form__reason__helping" value="helping">Helping out &#128519;</option>
+                    <option class="form__reason__other" value="other">Other &#129500;</option>
+                </select><br><br>
+                <label for="message">Message</label>
+                <input type="text" value="(optional)" class="form__message">
+                <input type="submit" value="Confirm" class="btn--primary btnsendcoinz">
+                <a href="index.html" class="btn--secondary">Cancel</a>
+                <p class="form__alert hide"></p>
+            </form>
         </div>
     </div>
     <div class="history">
@@ -38,22 +63,10 @@
             <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
             <a href="receivecoinz.html"> <p>Received 5 coinz from Jade</p></a>
          </div>
-         <div class="history__received">
-            <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-            <a href="receivecoinz.html"> <p>Received 5 coinz from Jade</p></a>
-         </div>
-         <div class="history__received">
-            <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-            <a href="receivecoinz.html"> <p>Received 5 coinz from Jade</p></a>
-         </div>
-         <div class="history__received">
-            <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-            <a href="receivecoinz.html"> <p>Received 5 coinz from Jade</p></a>
-         </div>
-        
-    </div>
-    <div class="btn--leaderboard"><a href="leaderboard.html">Check leaderboard</a></div>
-    <script src="../javascripts/signup.js"></script>
 
+</div>
+    <script src="../javascripts/signup.js"></script>
+    <script src="../javascripts/login.js"></script>
+    <script src="../javascripts/sendcoinz.js"></script>
 </body>
 </html>

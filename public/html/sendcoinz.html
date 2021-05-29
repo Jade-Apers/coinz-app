@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+/*<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,27 +14,28 @@
     <div class="send-coinz">
         <nav><a href="index.html" class="btn">Back</a></nav>
         <h1>Send coinz</h1>
-
         <div class="send-coinz__form">
-            <form action="index.html">
+            <form class="form" action="#">
                 <label for="to">To</label>
-                <input type="text">
+                <input type="text" class="form__to">
                 <label for="amount">Amount of Coinz</label>
-                <input type="number">
+                <input type="number" class="form__amountcoinz">
                 <label for="reason">Reason</label>
-                <select name="reason">
-                    <option value="teamwork">Teamwork &#128540;</option>
-                    <option value="extramile">Going the extra mile &#128076;</option>
-                    <option value="helping">Helping out &#128519;</option>
-                    <option value="other">Other &#129500;</option>
+                <select name="reason" class="form__reason">
+                    <option class="form__reason__teamwork" value="teamwork">Teamwork &#128540;</option>
+                    <option class="form__reason__extramile" value="extramile">Going the extra mile &#128076;</option>
+                    <option class="form__reason__helping" value="helping">Helping out &#128519;</option>
+                    <option class="form__reason__other" value="other">Other &#129500;</option>
                 </select><br><br>
                 <label for="message">Message</label>
-                <input type="text" value="(optional)">
-                <input type="submit" value="Confirm" class="btn">
+                <input type="text" value="(optional)" class="form__message">
+                <input type="submit" value="Confirm" class="btn btnsendcoinz">
                 <a href="index.html" class="btn--secondary">Cancel</a>
+                <p class="form__alert hide"></p>
             </form>
         </div>
     </div>
     <script src="../javascripts/login.js"></script>
+    <script src="../javascripts/sendcoinz.js"></script>
 </body>
-</html>
+</html>*/
