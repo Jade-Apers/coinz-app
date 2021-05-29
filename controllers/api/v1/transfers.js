@@ -25,7 +25,7 @@ const create = (req, res) => {
         })
     }*/
     let coin= new Coinz();
-    coin.sender= req.body.user;
+    coin.sender= req.body.sender;
     coin.receiver= req.body.receiver;
     coin.coinz= req.body.coinz;
     coin.reason= req.body.reason;
@@ -87,7 +87,7 @@ const update = (req, res) => {
     }).catch(err => {
         res.json(err);
     })
-
+}
     
 const getLeaderboard = (req, res) => {
     Coinz.find((err, docs) => {
