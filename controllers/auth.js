@@ -4,14 +4,14 @@ const config = require('config');
 
 const signup = async (req, res)=>{
     console.log(req.body);
-    
+   
     let username = req.body.username; 
-    let email = req.body.email;
+    let email= req.body.email;
     let password = req.body.password;
 
     const user = new User({
         username: username,
-        email: email
+        email:email
     });
 
     await user.setPassword(password);
@@ -20,7 +20,7 @@ const signup = async (req, res)=>{
         let token= jwt.sign({
             uid: result._id,
             username: result.username
-        }, "MyVerySecretWord");
+        }, config.get("jwt.secret"));
 
         res.json({
             "status": "success",
@@ -31,7 +31,8 @@ const signup = async (req, res)=>{
 
     }).catch(error =>{
         res.json({
-            "status":"error"
+            "status":"error",
+            "message": error
         })
     });
 };
@@ -43,7 +44,7 @@ const login= async(req, res, next) =>{
 
         if(!result.user){
             return res.json({
-                "status":"failed",
+                "status":"error",
                 "message":"login failed"
             })
         }
@@ -51,7 +52,7 @@ const login= async(req, res, next) =>{
         let token = jwt.sign({
             uid: result.user._id,
             username: result.user.username
-        }, config.get('jwt.secret'));
+        }, config.get("jwt.secret"));
 
 
         return res.json({
@@ -66,7 +67,6 @@ const login= async(req, res, next) =>{
                 "status": "error",
                 "message": error
             })
-
         });
     };
 

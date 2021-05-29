@@ -1,4 +1,5 @@
 const Coinz = require('../../../models/Coinz');
+const User = require('../../../models/User');
 
 const getAll = (req, res)=>{
     Coinz.find({
@@ -24,10 +25,10 @@ const create = (req, res) => {
         })
     }*/
     let coin= new Coinz();
-    coin.sender = req.body.sender;
-    coin.receiver = req.body.receiver;
-    coin.coinz=req.body.coinz;
-    coin.reason=req.body.reason;
+    coin.sender= req.body.user;
+    coin.receiver= req.body.receiver;
+    coin.coinz= req.body.coinz;
+    coin.reason= req.body.reason;
     coin.message = req.body.message;
 
     coin.save((err, doc)=>{
@@ -86,6 +87,25 @@ const update = (req, res) => {
     }).catch(err => {
         res.json(err);
     })
+
+    
+const getLeaderboard = (req, res) => {
+    Coinz.find((err, docs) => {
+        if(err){
+            res.json({
+                "status":"error", 
+                "message": "could not find leaders"
+            })
+        }
+        if(!err){
+            res.json({
+                "status": "success", 
+                "data": {
+                    "coinz": docs
+            }            
+        }).sort({"coinz": -1});
+        }
+    });
 }
 
   module.exports.getAll = getAll;
@@ -93,3 +113,4 @@ const update = (req, res) => {
   module.exports.upload = upload;
   module.exports.status = status;
   module.exports.update = update;
+  module.exports.getLeaderboard= getLeaderboard;

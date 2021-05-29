@@ -6,6 +6,7 @@ router.get('/', transfersController.getAll);  //router add a coin to your databa
 router.post('/', transfersController.create); //router post to create a coin 
 router.get('/:id', transfersController.upload); //router get details of one transfer
 router.get('/', transfersController.status);
+router.get('/leaderboard', transfersController.getLeaderboard);
 
 module.exports = router;
 

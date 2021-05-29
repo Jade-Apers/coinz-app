@@ -12,6 +12,12 @@ const coinzSchema = new Schema({
         type: Object,
         required: true
     },
+
+    receiver: {
+        type: String,
+        required: true
+    },
+
     coinz: {
         type: Number,
         required: true
