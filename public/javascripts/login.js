@@ -16,7 +16,7 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
     }).then(json =>{
         if(json.status === "success"){
             let token= json.data.token;
-            localStorage.setItem("token", token);
+            localStorage.getItem("token", token);
             window.location.href="index.html";
 
         } else{
@@ -26,9 +26,6 @@ var btnLogin = document.querySelector(".btnlogin").addEventListener("click", (e)
         }
     })
 });
-
-
-
 
 // login verification
 /*
