@@ -39,17 +39,12 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
-    
-  },
-
-  "engines": {
-    "node":">=14.16.0"
 },
   "description": "",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jade-Apers/coinz-app.git"
+    "url": "https://github.com/Jade-Apers/coinz-app.git"
   },
   "author": "",
   "license": "ISC",
