@@ -21,12 +21,14 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
     return response.json();
   }).then(json => {
     if(json.status === "success"){
-
+      let feedback = document.querySelector(".form__alert");
+      feedback.textContent="Transaction succeeded";
+      feedback.classList.remove('hide');
       window.location.href = "index.html"
     } else{
-      let failed = document.querySelector(".form__alert");
-      failed.textContent="Transaction failed";
-      failed.classList.remove('hide');
+      let feedback = document.querySelector(".form__alert");
+      feedback.textContent="Transaction failed";
+      feedback.classList.remove('hide');
     }
   }).catch(err =>{
     console.log(err);

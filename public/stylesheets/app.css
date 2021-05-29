@@ -45,6 +45,7 @@ a {
   padding: 10px;
   text-decoration: none; }
 
+
 .btn--secondary {
   background-color: #000aff;
   font-family: "roboto mono";
@@ -71,17 +72,24 @@ nav {
 .intro__picture {
   clip-path: circle(80px at center); }
 
+.coinz{
+  display: flex;
+  justify-content: center;
+}
+
 .wallet {
-  background-color: #fffcdd;
+  background-color: #0000FE;
   margin: 30px 50px 30px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: baseline; }
+  align-items: baseline; 
+  color: wheat
+  }
 
-.wallet__line {
-  width: 2px;
-  align-self: flex-end; }
+.wallet p{
+  color: wheat;
+}
 
 .history__profilepic {
   clip-path: circle(20px at center); }
@@ -231,6 +239,9 @@ input {
   padding: 10px;
   margin: 10px 0px 15px 0px; }
 
+.send-coinz{
+margin-top: -50px;
+}
 .send-coinz__form {
   background-color: #fffcdd;
   padding: 15px;

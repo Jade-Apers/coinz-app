@@ -24,11 +24,11 @@ const create = (req, res) => {
         })
     }*/
     let coin= new Coinz();
-    coin.user = req.body.user;
+    coin.sender = req.body.sender;
+    coin.receiver = req.body.receiver;
     coin.coinz=req.body.coinz;
     coin.reason=req.body.reason;
     coin.message = req.body.message;
-    coin.completed = false;
 
     coin.save((err, doc)=>{
         if(err){

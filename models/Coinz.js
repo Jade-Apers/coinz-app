@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 
 const coinzSchema = new Schema({
 
-    user: {
+    sender: {
+        type: Object,
+        required: true
+    },
+    receiver: {
         type: Object,
         required: true
     },
@@ -16,9 +20,8 @@ const coinzSchema = new Schema({
         type: String,
         required: true
     },
-    
    message: String,
-   completed: Boolean
+   date: Date
 })
 
 const Coinz = mongoose.model('Coinz', coinzSchema);
