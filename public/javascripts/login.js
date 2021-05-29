@@ -28,7 +28,7 @@ let formGlobal= document.querySelector(".login__form");
     }
 
     else {     
-        fetch('http://localhost:3000/users/login', {
+        fetch('/users/login', {
             method: "post",
             headers: {
                 'Content-Type': 'application/json'
