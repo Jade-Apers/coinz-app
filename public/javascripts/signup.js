@@ -2,63 +2,64 @@ let btnSignup = document.querySelector('.btnsignup').addEventListener("click", (
 let email= document.querySelector('.email').value;
 let password = document.querySelector('.password').value;
 let username = document.querySelector('.username').value;
-    
-fetch('http://localhost:3000/users/signup', {
-    method: "post",
-    headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        "email": email,
-        "username": username,
-        "password": password
-    })
-    }).then(response =>{
-        return response.json();
-    }).then(json =>{
-        if(json.status === "success") {
-            let feedback = document.querySelector(".alert");
-            feedback.textContent= "Sign up complete!";
-            feedback.classList.remove('hide');
-            
-            let token= json.data.token;
-            localStorage.setItem("token", token);
-            window.location.href="index.html";
-        }
-        });
-    });
-    
-    
+
+e.preventDefault();
+
       //signup verification
-    /*
-      let formSignup = document.querySelector(".signup__fields");
-      formSignup.addEventListener("submit", checkSignup);
       
-      function checkSignup(e) {
-          let hasErrors = false;
-          let formGlobal= document.querySelector(".signup__form");
-          formGlobal.classList.remove("alert");
-          formGlobal.classList.add("hide");
+let formGlobal= document.querySelector(".signup__form");
+    formGlobal.classList.remove("alert");
+    //formGlobal.classList.add("hide");
       
-          let txtEmail = document.querySelector("#mailadres");
-          let thomasmore= txtEmail.value.indexOf("@student.thomasmore.be");
+let thomasmore= email.indexOf("@student.thomasmore.be");
       
-          if (txtEmail.value === "" || thomasmore === -1) {
-              let emailError= document.querySelector(".signup__form"); 
-              emailError.classList.add("alert");
-              hasErrors =  true;
-          }
-      
-          if (hasErrors === false) {
-            checkSignup();
-          }
-        
-          e.preventDefault();
+    if (email === "" || thomasmore === -1) {
+       let labelEmail=document.querySelector("#email");
+       labelEmail.classList.add("alert");
+       labelEmail.innerHTML="Email address: gebruik je Thomas More mailadres";
         }
-      
-        function signupChecked() {
-      
-            document.querySelector(".signup__form").classList.add("hide");
-      
-        }
-        */
+
+    else if (username === "") {
+        let labelEmail=document.querySelector("#username");
+        labelEmail.classList.add("alert");
+        labelEmail.innerHTML="Username: Vul dit veld in";
+    }
+     
+    else if (password === "") {
+        let labelEmail=document.querySelector("#password");
+        labelEmail.classList.add("alert");
+        labelEmail.innerHTML="Password: Vul dit veld in";
+    }
+
+    else {    
+        fetch('http://localhost:3000/users/signup', {
+            method: "post",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                "email": email,
+                "username": username,
+                "password": password
+            })
+            }).then(response =>{
+                return response.json();
+            }).then(json =>{
+                if(json.status === "error"){
+                   let feedback = document.querySelector(".alert");
+                   feedback.textContent= "Sign up failed. Please try again!";
+                   feedback.classList.remove('hide');
+                }
+
+                else if (json.status === "success") {
+                    //let feedback = document.querySelector(".alert");
+                    //feedback.textContent= "Sign up complete!";
+                    //feedback.classList.remove('hide');
+                    
+                    let token= json.data.token;
+                    localStorage.setItem("token", token);
+                    window.location.href="index.html";
+                }
+                });
+            }
+        });
