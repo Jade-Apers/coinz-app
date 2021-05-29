@@ -9,9 +9,6 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const passport= require('./passport/passport');
 const config = require('config');
-const uri = process.env.MONGODB_URI;
-
-
 
 const mongoose = require('mongoose');
 const e = require('express');
