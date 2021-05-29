@@ -4,12 +4,14 @@ const config = require('config');
 
 const signup = async (req, res, next)=>{
     console.log(req.body);
-    
+   
     let username = req.body.username; 
+    let email= req.body.email;
     let password = req.body.password;
 
     const user = new User({
-        username: username
+        username: username,
+        email:email
     });
 
     await user.setPassword(password);

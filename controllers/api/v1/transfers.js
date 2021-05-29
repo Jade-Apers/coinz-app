@@ -19,10 +19,10 @@ const getAll = (req, res)=>{
 
 const create = (req, res) => {
     let coin= new Coinz();
-    coin.user=req.body.user;
-    coin.coinz=req.body.coinz;
-    coin.reason=req.body.reason;
-    coin.completed=false;
+    coin.sender= req.body.user;
+    coin.receiver= req.body.receiver;
+    coin.coinz= req.body.coinz;
+    coin.reason= req.body.reason;
     coin.message = req.body.message;
 
     coin.save((err, doc)=>{
