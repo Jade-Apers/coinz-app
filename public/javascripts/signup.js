@@ -44,7 +44,7 @@ let thomasmore= email.indexOf("@student.thomasmore.be");
     }
 
     else {    
-        fetch('/users/signup', {
+        fetch('http://localhost:3000/users/signup', {
             method: "post",
             headers: {
                 'Content-Type': 'application/json'
