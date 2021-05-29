@@ -1,11 +1,11 @@
-fetch("/api/v1/transfers", {
-    'headers': {
-        Authorization: 'Bearer ' + localStorage.getItem('token')
+fetch("http://localhost:3000/api/v1/transfers",{
+    'headers':{
+        'Authorization': 'Bearer' + localStorage.getItem('token')
     }
-}).then(result => {
+}).then(result =>{
     return result.json();
-}).then(json => {
+}).then(json =>{
     console.log(json);
-}).catch(err => {
-    console.log("cry")
+}).catch(err=>{
+    console.log("wenen");
 });

@@ -21,8 +21,8 @@ const create = (req, res) => {
     coin.user=req.body.user;
     coin.coinz=req.body.coinz;
     coin.reason=req.body.reason;
-    coin.message=req.body.message;
     coin.completed=false;
+    coin.message = req.body.message;
 
     coin.save((err, doc)=>{
         if(err){
@@ -41,7 +41,6 @@ const create = (req, res) => {
         }
     })
 }
-
 
 const upload = (req, res) => {
     res.json({
