@@ -37,7 +37,8 @@ a {
 * {
   box-sizing: border-box; }
 
-.btn--primary {
+
+.btn{
   background-color: #33ff00;
   font-family: "roboto mono";
   font-weight: 600;

@@ -1,5 +1,5 @@
 const Coinz = require('../../../models/Coinz');
-const User = require('../../../models/User');
+const config = require('config');
 
 const getAll = (req, res)=>{
     Coinz.find({
@@ -16,14 +16,8 @@ const getAll = (req, res)=>{
     });
 }
 
+//create a transaction
 const create = (req, res) => {
-  /*  let senderId = getIdFromJWT(req);
-    if(!senderID){
-        return res.json({
-            "status": "error",
-            "message": "We haven't found the user in our database."
-        })
-    }*/
     let coin= new Coinz();
     coin.sender= req.body.sender;
     coin.receiver= req.body.receiver;
