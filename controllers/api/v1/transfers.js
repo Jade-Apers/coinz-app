@@ -123,9 +123,7 @@ const getDetails = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                data: {
-                    "details": docs          
-                }
+                data: docs          
             })
         }
     }).sort({"coinz": -1});
