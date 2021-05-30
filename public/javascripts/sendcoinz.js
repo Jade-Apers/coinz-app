@@ -15,7 +15,7 @@ fetch('http://localhost:3000/api/v1/transfers',{
     'Authorization': 'Bearer ' + localStorage.getItem('token')
 
 
-})
+}})
 
 
 
