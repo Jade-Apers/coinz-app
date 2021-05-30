@@ -25,7 +25,7 @@ window.addEventListener("load", function(){
                         let score= element.coinz;
 
 
-                        //let username= json.data.leaderboard;
+                        //let username=git json.data.leaderboard;
                        // let usernameDetail= username._id="1";
 
                         ranking= 
