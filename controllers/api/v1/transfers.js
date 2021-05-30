@@ -1,8 +1,11 @@
 const Coinz = require('../../../models/Coinz');
 
 const getAll = (req, res)=>{
-    console.log(getAll);
-    Coinz.find({sender: sender}),(err, docs) =>{
+    /*console.log(getAll);
+    Coinz.find({sender: sender}),*/
+    
+    Coinz.find(
+    (err, docs) =>{
         if(!err){
             res.json({
                 "status": "success", 
@@ -18,7 +21,7 @@ const getAll = (req, res)=>{
                 "message": error
             })
         }
-    };
+    });
 }
 
 //create a transaction
@@ -95,7 +98,11 @@ const update = (req, res) => {
 }
     
 const getLeaderboard = (req, res) => {
-    Coinz.find((err, docs) => {
+    
+    User.find(/*{
+        "username": 1, 
+        "coinz": 1
+    }, */(err, docs) => {
         if(err){
             res.json({
                 "status":"error", 
@@ -105,10 +112,12 @@ const getLeaderboard = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                "leaderboard": leaderboard          
-        }).sort({"coinz": -1});
+                data: {
+                    "leaderboard": docs          
+                }
+            })
         }
-    });
+    }).sort({"coinz": -1});
 }
 
   module.exports.getAll = getAll;

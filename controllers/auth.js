@@ -8,10 +8,12 @@ const signup = async (req, res)=>{
     let username = req.body.username; 
     let email= req.body.email;
     let password = req.body.password;
+    let coinz= req.body.coinz;
 
     const user = new User({
         username: username,
-        email:email
+        email:email,
+        coinz:coinz
     });
 
     await user.setPassword(password);

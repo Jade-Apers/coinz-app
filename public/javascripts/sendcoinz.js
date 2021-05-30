@@ -5,17 +5,38 @@
     , retries: 10 // Number: How many times we should try to reconnect.
   }
 });*/
+//getcoinz
+window.addEventListener("load", function(){
+  let token = localStorage.getItem("token");
+  if(!token){
+      window.location.replace("login.html");
+  }
 
+  else {
+      fetch("http://localhost:3000/api/v1/sendcoinz", {
+          method: "get", 
+          headers: {
+              'Content-Type': 'application/json', 
+              'Authorization': `Bearer ${token}`
+          }
+          }).then(response => {
+              return response.json();
+          }).then(json => {
+              console.log(json);
+              if(json.status === 'success'){
 
-//load transfers met een get request zoals bij  leaderboard
-fetch('http://localhost:3000/api/v1/transfers',{
-  method:"get",
-  'headers':{
-    'Content-Type': 'application/json',
-    'Authorization': 'Bearer ' + localStorage.getItem('token')
-
-
-})
+                let coinz= 
+                `<div class="history">
+                <div class="history__received">
+                <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
+                <a href="receivecoinz.html"> <p>Received ${json.data.transfer.coinz} coinz from ${json.data.transfer.sender} </p></a>
+                </div>
+                <div class="history">`;
+                document.querySelector(".history").insertAdjacentHTML('afterend', coinz);
+                }
+              })
+          }
+      })
 
 //send a coin with enter
 const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("click", (e)=>{

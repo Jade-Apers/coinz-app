@@ -104,7 +104,7 @@ nav {
 .leaderboard__list {
   display: flex;
   flex-direction: row;
-  background-color: #d7dbff;
+  background-color: #fffcdd;
   padding: 20px;
   align-items: center;
   justify-content: space-between; }
