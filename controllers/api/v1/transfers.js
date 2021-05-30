@@ -1,5 +1,5 @@
 const Coinz = require('../../../models/Coinz');
-const User = require('../../../models/User');
+const config = require('config');
 
 const getAll = (req, res)=>{
     Coinz.find({
@@ -16,16 +16,10 @@ const getAll = (req, res)=>{
     });
 }
 
+//create a transaction huh
 const create = (req, res) => {
-  /*  let senderId = getIdFromJWT(req);
-    if(!senderID){
-        return res.json({
-            "status": "error",
-            "message": "We haven't found the user in our database."
-        })
-    }*/
     let coin= new Coinz();
-    coin.sender= req.body.user;
+    coin.sender= req.body.sender;
     coin.receiver= req.body.receiver;
     coin.coinz= req.body.coinz;
     coin.reason= req.body.reason;
@@ -87,7 +81,7 @@ const update = (req, res) => {
     }).catch(err => {
         res.json(err);
     })
-
+}
     
 const getLeaderboard = (req, res) => {
     Coinz.find((err, docs) => {
@@ -113,4 +107,4 @@ const getLeaderboard = (req, res) => {
   module.exports.upload = upload;
   module.exports.status = status;
   module.exports.update = update;
-  module.exports.getLeaderboard= getLeaderboard;
+  module.exports.getLeaderboard = getLeaderboard;
