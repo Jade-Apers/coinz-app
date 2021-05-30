@@ -25,7 +25,7 @@ const create = (req, res) => {
         })
     }*/
     let coin= new Coinz();
-    coin.sender= req.body.user;
+    coin.sender= req.body.sender;
     coin.receiver= req.body.receiver;
     coin.coinz= req.body.coinz;
     coin.reason= req.body.reason;
@@ -53,7 +53,7 @@ const upload = (req, res) => {
     res.json({
         status: "success", 
         data: {
-            message:"GET transfers" + req.query.username
+            message:"GET transfers " + req.query.username
         }
     });
 }
@@ -86,8 +86,8 @@ const update = (req, res) => {
         })
     }).catch(err => {
         res.json(err);
-    })
-
+    });
+}
     
 const getLeaderboard = (req, res) => {
     Coinz.find((err, docs) => {
@@ -100,9 +100,7 @@ const getLeaderboard = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                "data": {
-                    "coinz": docs
-            }            
+                "leaderboard": leaderboard          
         }).sort({"coinz": -1});
         }
     });
