@@ -4,8 +4,9 @@ const getAll = (req, res)=>{
     /*console.log(getAll);
     Coinz.find({sender: sender}),*/
     
-    Coinz.find(
-    (err, docs) =>{
+    Coinz.find({
+        "user": "Jadeke"
+    }, (err, docs) =>{
         if(!err){
             res.json({
                 "status": "success", 
