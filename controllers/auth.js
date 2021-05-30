@@ -8,7 +8,7 @@ const signup = async (req, res)=>{
     let username = req.body.username; 
     let email= req.body.email;
     let password = req.body.password;
-    let coinz= req.body.coinz;
+    let coinz= 50;
 
     const user = new User({
         username: username,
@@ -36,6 +36,7 @@ const signup = async (req, res)=>{
             "status":"error",
             "message": error
         })
+        console.log(error);
     });
 };
 
