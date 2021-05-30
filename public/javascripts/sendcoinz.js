@@ -38,6 +38,13 @@ window.addEventListener("load", function(){
           }
       })
 
+window.addEventListener("load", function(){
+  let tokentje = localStorage.getItem("token");
+  if(!tokentje){
+      window.location.replace("login.html");
+  }
+
+  else {
 //send a coin with enter
 const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("click", (e)=>{
   const receiver = document.querySelector(".form__to").value;
