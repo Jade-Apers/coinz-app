@@ -92,3 +92,4 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
 
   e.preventDefault();
 });
+
