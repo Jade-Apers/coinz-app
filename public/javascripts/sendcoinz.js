@@ -17,13 +17,6 @@ fetch('http://localhost:3000/api/v1/transfers',{
 
 }})
 
-
-
-
-
-
-
-
 //send a coin with enter
 const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("click", (e)=>{
   const receiver = document.querySelector(".form__to").value;
