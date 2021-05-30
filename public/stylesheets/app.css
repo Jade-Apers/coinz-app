@@ -37,8 +37,7 @@ a {
 * {
   box-sizing: border-box; }
 
-
-.btn{
+.btn {
   background-color: #33ff00;
   font-family: "roboto mono";
   font-weight: 600;
@@ -46,19 +45,12 @@ a {
   padding: 10px;
   text-decoration: none; }
 
-
 .btn--secondary {
   background-color: #000aff;
-  font-family: "roboto mono";
-  font-weight: 600;
-  color: #fffcdd;
-  padding: 10px;
-  text-decoration: none; }
+  color: #fffcdd; }
 
 .btn--leaderboard {
   margin: 80px 0px 80px 0px;
-  background-color: #33ff00;
-  padding: 10px;
   width: 200px;
   display: grid;
   margin: auto; }
@@ -73,24 +65,17 @@ nav {
 .intro__picture {
   clip-path: circle(80px at center); }
 
-.coinz{
-  display: flex;
-  justify-content: center;
-}
-
 .wallet {
-  background-color: #0000FE;
+  background-color: #fffcdd;
   margin: 30px 50px 30px 50px;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  align-items: baseline; 
-  color: wheat
-  }
+  align-items: baseline; }
 
-.wallet p{
-  color: wheat;
-}
+.wallet__line {
+  width: 2px;
+  align-self: flex-end; }
 
 .history__profilepic {
   clip-path: circle(20px at center); }
@@ -123,13 +108,14 @@ nav {
   align-items: center;
   justify-content: space-between; }
 
+.leaderboard__grid__rank {
+  background-color: #fffcdd;
+  padding: 10px 25px;
+  margin: 15px 0px 15px 0px; }
+
 .leaderboard__grid__name {
   background-color: #fffcdd;
   padding: 10px 85px;
-  margin: 15px 0px 15px 0px; }
-
-.leaderboard__grid__rank {
-  padding: 10px 25px;
   margin: 15px 0px 15px 0px; }
 
 .leaderboard__grid__score {
@@ -142,8 +128,7 @@ nav {
   margin: 25px; }
 
 .leaderboard__grid {
-  margin: 150px;
-}
+  margin: 150px; }
 
 @media (min-width: 1080px) {
   .leaderboard__grid {
@@ -247,9 +232,6 @@ input {
   padding: 10px;
   margin: 10px 0px 15px 0px; }
 
-.send-coinz{
-margin-top: -50px;
-}
 .send-coinz__form {
   background-color: #fffcdd;
   padding: 15px;
