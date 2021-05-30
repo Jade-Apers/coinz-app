@@ -223,8 +223,6 @@ input[type=submit] {
 }
 
 .transfer__image {
-  clip-path: circle(50px at center);
-  place-self: center;
   grid-column: 0/3;
 }
 

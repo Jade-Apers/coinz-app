@@ -27,21 +27,25 @@ window.addEventListener("load", function(){
                         let coinz= element.coinz;
                         let reason= element.reason;
 */
+                let foto= "arrow.png"
+
             console.log(json.data);
 
                 detailsPage= 
                 `
-                    <div class="transfer__image"><img src="/src/images/NV6A6972Enjoy.jpg" width="300" alt="profile picture sender"></div>
-                    <div class="transfer__arrow"><img src="/src/images/arrow.png" alt="arrow" width="50"> </div>
-                    <div class="transfer__image"><img src="/src/images/NV6A6959Enjoy.jpg" width="300" alt="profile picture receiver"></div>
-                    <div class="transfer__sender"><h3>From ${json.data.sender}</h3></div>
-                    <div class="transfer__coinz"> <h3>+ ${json.data.coinz} coinz</h3></div>
+                    <div class="transfer__image"><p>&#128520;</p></div>
+                    <div class="transfer__arrow"><p>&#10145;&#65039;</p></div>
+                    <div class="transfer__image"><p>&#128519;</p></div>
+                    <div class="transfer__sender"><h3>From ${json.data.coinz.sender}</h3></div>
+                    <div class="transfer__coinz"> <h3>+ ${json.data.coinz.coinz} coinz</h3></div>
                     <div class="transfer__reason"><p>Reason:</p></div>
-                    <div class= "transfer__reason-icon"><img src="/src/images/support (1).svg" alt="reason icon" width="40px" class="fill"></div>
-                    <div class="transfer__reason-title"><p>${json.data.reason}</p></div>
+                    <div class="transfer__reason-title"><p>${json.data.coinz.reason}</p></div>
                 `
                 document.querySelector(".transfer").innerHTML += detailsPage;
-              /*          
+
+              /*      
+              
+              
                     })
                 };
                 })

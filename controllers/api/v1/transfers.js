@@ -123,7 +123,7 @@ const getLeaderboard = (req, res) => {
 const getDetails = (req, res) => {
     let id = req.params.id;
    // let token = req.headers.authorization;
-    Coinz.find({_id:id},
+    Coinz.findOne(/*{_id:id},*/
         (err, docs) => {
         if(err){
             res.json({
@@ -134,7 +134,9 @@ const getDetails = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                data: docs          
+                data: {
+                    "coinz": docs  
+                }        
             })
         }
     }).sort({"coinz": -1});
