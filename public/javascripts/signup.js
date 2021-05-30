@@ -23,7 +23,7 @@ let thomasmore= email.indexOf("@student.thomasmore.be");
     }, 4000)
     }
 
-    else if (username === "") {
+    if (username === "") {
         let labelUsername=document.querySelector("#username");
         labelUsername.classList.add("alert");
         labelUsername.innerHTML="Username: Vul dit veld in";
@@ -33,7 +33,7 @@ let thomasmore= email.indexOf("@student.thomasmore.be");
         }, 4000)
     }
      
-    else if (password === "") {
+    if (password === "") {
         let labelPassword=document.querySelector("#password");
         labelPassword.classList.add("alert");
         labelPassword.innerHTML="Password: Vul dit veld in";

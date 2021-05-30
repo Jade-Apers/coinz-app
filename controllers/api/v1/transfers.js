@@ -47,7 +47,7 @@ const upload = (req, res) => {
     res.json({
         status: "success", 
         data: {
-            message:"GET transfers" + req.query.username
+            message:"GET transfers " + req.query.username
         }
     });
 }
@@ -80,7 +80,7 @@ const update = (req, res) => {
         })
     }).catch(err => {
         res.json(err);
-    })
+    });
 }
     
 const getLeaderboard = (req, res) => {
@@ -94,9 +94,7 @@ const getLeaderboard = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                "data": {
-                    "coinz": docs
-            }            
+                "leaderboard": leaderboard          
         }).sort({"coinz": -1});
         }
     });
