@@ -1,4 +1,6 @@
 const Coinz = require('../../../models/Coinz');
+const User = require('../../../models/User');
+
 
 const getAll = (req, res)=>{
     /*console.log(getAll);
