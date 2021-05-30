@@ -24,10 +24,6 @@ window.addEventListener("load", function(){
                         let username= element.username;
                         let score= element.coinz;
 
-
-                        //let username= json.data.leaderboard;
-                       // let usernameDetail= username._id="1";
-
                         ranking= 
                         `<div class="leaderboard__list">
                             <div class="leaderboard__grid__rank">${rankingItem}</div>    
@@ -37,12 +33,9 @@ window.addEventListener("load", function(){
                         document.querySelector(".leaderboard__grid").innerHTML += ranking;
                         rankingItem++;
 
-                       // console.log(json.data.leaderboard)
-
-                        ///rankingItem++;
+    
                     })
                 };
-                //    });
                 })
             }
         })
