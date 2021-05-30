@@ -14,11 +14,11 @@ gulp.task('cssmin', async function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('minify', async function (){
+/*gulp.task('minify', async function (){
 	return gulp.src('public/html/*.html')
 	.pipe(htmlmin({ collapseWhitespace: true }))
 	.pipe(gulp.dest('dist/html'));
-});
+});*/
 
 gulp.task ('sass2css', async function(){
     return gulp.src('src/**/*.scss')
@@ -36,11 +36,11 @@ gulp.task ('image', async function(){
 gulp.task('watch', function(){
 	gulp.watch('src/**/*.scss', gulp.series('sass2css'));
 	gulp.watch('src/images/*', gulp.series('image'));
-	gulp.watch('public/html/*.html', gulp.series('minify'));
+//	gulp.watch('public/html/*.html', gulp.series('minify'));
 	gulp.watch('public/stylesheets/*.css', gulp.series('cssmin'))
 });
 
-gulp.task('default', gulp.parallel('sass2css', 'minify', 'image', 'cssmin', 'watch'));
+gulp.task('default', gulp.parallel('sass2css', 'image', 'cssmin', 'watch'));
 
 
 

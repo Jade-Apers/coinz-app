@@ -1,10 +1,8 @@
 const Coinz = require('../../../models/Coinz');
-const config = require('config');
 
 const getAll = (req, res)=>{
-    Coinz.find({
-        "user": "Joris"
-    }, (err, docs) =>{
+    console.log(getAll);
+    Coinz.find({sender: sender}),(err, docs) =>{
         if(!err){
             res.json({
                 "status": "success", 
@@ -13,17 +11,26 @@ const getAll = (req, res)=>{
                 }
             });
         }  
-    });
+
+        else{
+            res.json({
+                "status": "error",
+                "message": error
+            })
+        }
+    };
 }
 
 //create a transaction
 const create = (req, res) => {
     let coin= new Coinz();
-    coin.sender= req.body.sender;
+    coin.sender= req.user.username;
+    console.log(req.user.username);
     coin.receiver= req.body.receiver;
     coin.coinz= req.body.coinz;
     coin.reason= req.body.reason;
     coin.message = req.body.message;
+    console.log(coin);
 
     coin.save((err, doc)=>{
         if(err){
@@ -40,14 +47,18 @@ const create = (req, res) => {
                 }
             });
         }
+        console.log(doc);
+        console.log(create);
     })
+   
 }
 
+//ophalen van coinz
 const upload = (req, res) => {
     res.json({
         status: "success", 
         data: {
-            message:"GET transfers" + req.query.username
+            message:"GET transfers " + req.query.username
         }
     });
 }
@@ -63,8 +74,8 @@ const status = (req, res) => {
 
 const update = (req, res) => {
     let user = req.user._id;
-    let coinzId = req.params.id;
-    Coinz.findOneAndUpdate({
+
+    Coinz.findOne({
         user: user,
         _id: coinz
     }, {
@@ -80,7 +91,7 @@ const update = (req, res) => {
         })
     }).catch(err => {
         res.json(err);
-    })
+    });
 }
     
 const getLeaderboard = (req, res) => {
@@ -94,9 +105,7 @@ const getLeaderboard = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                "data": {
-                    "coinz": docs
-            }            
+                "leaderboard": leaderboard          
         }).sort({"coinz": -1});
         }
     });
@@ -107,4 +116,4 @@ const getLeaderboard = (req, res) => {
   module.exports.upload = upload;
   module.exports.status = status;
   module.exports.update = update;
-  module.exports.getLeaderboard= getLeaderboard;
+  module.exports.getLeaderboard = getLeaderboard;
