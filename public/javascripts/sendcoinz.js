@@ -6,6 +6,7 @@
   }
 });*/
 //getcoinz
+/*
 
 window.addEventListener("load", function(){
   let token = localStorage.getItem("token");
@@ -36,7 +37,7 @@ window.addEventListener("load", function(){
                 }
               })
           }
-      })
+      })*/
 
 window.addEventListener("load", function(){
   let tokentje = localStorage.getItem("token");
@@ -91,5 +92,7 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
   })
 
   e.preventDefault();
-});
-  });
+  })
+}
+})
+

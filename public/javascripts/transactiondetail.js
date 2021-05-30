@@ -30,7 +30,7 @@ window.addEventListener("load", function(){
             console.log(json.data);
 
                 detailsPage= 
-                `<div class="transfer">
+                `
                     <div class="transfer__image"><img src="/src/images/NV6A6972Enjoy.jpg" width="300" alt="profile picture sender"></div>
                     <div class="transfer__arrow"><img src="/src/images/arrow.png" alt="arrow" width="50"> </div>
                     <div class="transfer__image"><img src="/src/images/NV6A6959Enjoy.jpg" width="300" alt="profile picture receiver"></div>
@@ -39,7 +39,7 @@ window.addEventListener("load", function(){
                     <div class="transfer__reason"><p>Reason:</p></div>
                     <div class= "transfer__reason-icon"><img src="/src/images/support (1).svg" alt="reason icon" width="40px" class="fill"></div>
                     <div class="transfer__reason-title"><p>${json.data.reason}</p></div>
-                </div>`
+                `
                 document.querySelector(".transfer").innerHTML += detailsPage;
               /*          
                     })
