@@ -6,6 +6,7 @@
   }
 });*/
 //getcoinz
+
 window.addEventListener("load", function(){
   let token = localStorage.getItem("token");
   if(!token){
