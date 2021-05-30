@@ -1,8 +1,12 @@
 const Coinz = require('../../../models/Coinz');
 
 const getAll = (req, res)=>{
-    console.log(getAll);
-    Coinz.find({sender: sender}),(err, docs) =>{
+    /*console.log(getAll);
+    Coinz.find({sender: sender}),*/
+    
+    Coinz.find({
+        "user": "Jadeke"
+    }, (err, docs) =>{
         if(!err){
             res.json({
                 "status": "success", 
@@ -18,7 +22,7 @@ const getAll = (req, res)=>{
                 "message": error
             })
         }
-    };
+    });
 }
 
 //create a transaction
