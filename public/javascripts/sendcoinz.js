@@ -70,6 +70,7 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
       <a href="receivecoinz.html"> <p>Send ${json.data.transfer.coinz} coinz to ${json.data.transfer.receiver} </p></a>
       </div>
       <div class="history">`;
+      
       document.querySelector(".history").insertAdjacentHTML('afterend', transfer);
     } 
     else{
