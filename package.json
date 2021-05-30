@@ -5,7 +5,7 @@
   "scripts": {
     "start": "./node_modules/.bin/nodemon ./bin/www",
     "gulp": "./node_modules/.bin/gulp"
-  },
+},
   "dependencies": {
     "aos": "^3.0.0-beta.6",
     "config": "^3.3.6",
@@ -39,12 +39,12 @@
     "gulp-uglify": "^3.0.2",
     "node-sass": "^5.0.0",
     "nodemon": "^2.0.7"
-  },
+},
   "description": "",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jade-Apers/coinz-app.git"
+    "url": "https://github.com/Jade-Apers/coinz-app.git"
   },
   "author": "",
   "license": "ISC",

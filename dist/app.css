@@ -125,33 +125,37 @@ nav {
 .leaderboard__list {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
   background-color: #d7dbff;
   padding: 20px;
+  align-items: center;
   justify-content: space-between;
 }
 
 .leaderboard__grid__rank {
   background-color: #fffcdd;
-  padding: 10px;
+  padding: 10px 25px;
   margin: 15px 0px 15px 0px;
 }
 
 .leaderboard__grid__name {
   background-color: #fffcdd;
-  padding: 10px;
+  padding: 10px 85px;
   margin: 15px 0px 15px 0px;
 }
 
 .leaderboard__grid__score {
   background-color: #000aff;
-  color: red;
-  padding: 10px;
+  color: white;
+  padding: 10px 45px;
   margin: 15px 0px 15px 0px;
 }
 
 .leaderboard {
   margin: 25px;
+}
+
+.leaderboard__grid {
+  margin: 150px;
 }
 
 @media (min-width: 1080px) {

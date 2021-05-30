@@ -1,9 +1,13 @@
 const Coinz = require('../../../models/Coinz');
 const User = require('../../../models/User');
 
+
 const getAll = (req, res)=>{
+    /*console.log(getAll);
+    Coinz.find({sender: sender}),*/
+    
     Coinz.find({
-        "user": "Joris"
+        "user": "Jadeke"
     }, (err, docs) =>{
         if(!err){
             res.json({
@@ -13,23 +17,26 @@ const getAll = (req, res)=>{
                 }
             });
         }  
+
+        else{
+            res.json({
+                "status": "error",
+                "message": error
+            })
+        }
     });
 }
 
+//create a transaction
 const create = (req, res) => {
-  /*  let senderId = getIdFromJWT(req);
-    if(!senderID){
-        return res.json({
-            "status": "error",
-            "message": "We haven't found the user in our database."
-        })
-    }*/
     let coin= new Coinz();
-    coin.sender= req.body.sender;
+    coin.sender= req.user.username;
+    console.log(req.user.username);
     coin.receiver= req.body.receiver;
     coin.coinz= req.body.coinz;
     coin.reason= req.body.reason;
     coin.message = req.body.message;
+    console.log(coin);
 
     coin.save((err, doc)=>{
         if(err){
@@ -46,9 +53,13 @@ const create = (req, res) => {
                 }
             });
         }
+        console.log(doc);
+        console.log(create);
     })
+   
 }
 
+//ophalen van coinz
 const upload = (req, res) => {
     res.json({
         status: "success", 
@@ -69,8 +80,8 @@ const status = (req, res) => {
 
 const update = (req, res) => {
     let user = req.user._id;
-    let coinzId = req.params.id;
-    Coinz.findOneAndUpdate({
+
+    Coinz.findOne({
         user: user,
         _id: coinz
     }, {
