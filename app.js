@@ -35,7 +35,7 @@ app.use(cors());
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/api/v1/transfers', passport.authenticate('jwt', { session: false }), apiV1Transfersroutes);
-app.use('/api/v1/leaderboard', apiV1Transfersroutes)
+app.use('/api/v1/', apiV1Transfersroutes)
 
 
 // catch 404 and forward to error handler

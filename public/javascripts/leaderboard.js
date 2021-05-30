@@ -16,38 +16,34 @@ window.addEventListener("load", function(){
             }).then(json => {
                 console.log(json);
                 if(json.status === 'success'){
-                    let leaderboard= json.leaderboard;
                     let ranking;
                     let rankingItem= 1;
 
-                   /* leaderboard.forEach(element => {                        
+
+                      json.data.leaderboard.forEach(element => {                        
                         let username= element.username;
                         let score= element.coinz;
 
-                   */     
-                      /*  ranking= 
-                        `<div class="leaderboard__list">
-                            <div class="leaderboard__grid__rank">${rankingItem} Coinz</div>    
-                            <div class="leaderboard__grid__name">${username}</div>
-                            <div class="leaderboard__grid__score">${score} Coinz</div>
-                        </div>
-                        <hr class="list_hr">`
-                        document.querySelector(".leaderboard__grid").innerHTML += ranking;
-                        rankingItem++;*/
 
-                    for(let rankingItem=1; rankingItem<=10; rankingItem++){
-                        console.log("test");
+                        //let username= json.data.leaderboard;
+                       // let usernameDetail= username._id="1";
+
                         ranking= 
                         `<div class="leaderboard__list">
                             <div class="leaderboard__grid__rank">${rankingItem}</div>    
-                            <div class="leaderboard__grid__name">Jade</div>
-                            <div class="leaderboard__grid__score">3 Coinz</div>
-                        </div>
-                        <hr class="list_hr">`
+                            <div class="leaderboard__grid__name">${element.username}</div>
+                            <div class="leaderboard__grid__score">${element.coinz} Coinz</div>
+                        </div>`
                         document.querySelector(".leaderboard__grid").innerHTML += ranking;
+                        rankingItem++;
+
+                       // console.log(json.data.leaderboard)
+
                         ///rankingItem++;
-                    }
+                    })
+                };
                 //    });
-                }
-            })
-        }})  
+                })
+            }
+        })
+      
