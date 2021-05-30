@@ -25,12 +25,11 @@ window.addEventListener("load", function(){
           }).then(json => {
               console.log(json);
               if(json.status === 'success'){
-
                 let coinz= 
                 `<div class="history">
                 <div class="history__received">
                 <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-                <a href="receivecoinz.html"> <p>Received ${json.data.transfer.coinz} coinz from ${json.data.transfer.sender} </p></a>
+                <a href="receivecoinz.html"> <p>Send ${json.data.transfer.coinz} coinz to ${json.data.transfer.receiver} </p></a>
                 </div>
                 <div class="history">`;
                 document.querySelector(".history").insertAdjacentHTML('afterend', coinz);
@@ -68,9 +67,10 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
       `<div class="history">
       <div class="history__received">
       <img src="/src/images/NV6A6972Enjoy.jpg" alt="profile picture" height=65px class="history__profilepic"></a>
-      <a href="receivecoinz.html"> <p>Received ${json.data.transfer.coinz} coinz from ${json.data.transfer.sender} </p></a>
+      <a href="receivecoinz.html"> <p>Send ${json.data.transfer.coinz} coinz to ${json.data.transfer.receiver} </p></a>
       </div>
       <div class="history">`;
+      
       document.querySelector(".history").insertAdjacentHTML('afterend', transfer);
     } 
     else{

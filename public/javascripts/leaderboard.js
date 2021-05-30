@@ -27,13 +27,15 @@ window.addEventListener("load", function(){
                         ranking= 
                         `<div class="leaderboard__list">
                             <div class="leaderboard__grid__rank">${rankingItem}</div>    
-                            <div class="leaderboard__grid__name">${element.username}</div>
-                            <div class="leaderboard__grid__score">${element.coinz} Coinz</div>
+                            <div class="leaderboard__grid__name">${username}</div>
+                            <div class="leaderboard__grid__score">${score} Coinz</div>
                         </div>`
                         document.querySelector(".leaderboard__grid").innerHTML += ranking;
                         rankingItem++;
 
-    
+                       console.log(json.data.leaderboard)
+
+                        ///rankingItem++;
                     })
                 };
                 })
