@@ -94,6 +94,7 @@ nav {
   .wallet {
     width: 500px;
     margin: auto; }
+    
   .history {
     width: 600px;
     margin: auto;
@@ -130,10 +131,10 @@ nav {
 .leaderboard__grid {
   margin: 150px; }
 
-@media (min-width: 1080px) {
+
   .leaderboard__grid {
     width: 500px;
-    margin: auto; } }
+    margin: auto; } 
 
 .login {
   text-align: center;
@@ -257,3 +258,4 @@ input {
   .signup__form {
     margin: 70px auto auto auto;
     width: 500px; } }
+  
