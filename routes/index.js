@@ -6,3 +6,4 @@ router.get('/', function(req, res) {
   res.redirect('https://coinzapp-jaya.herokuapp.com/login.html')
 });
 module.exports = router;
+ 
