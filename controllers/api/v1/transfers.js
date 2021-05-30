@@ -96,10 +96,7 @@ const update = (req, res) => {
     
 const getLeaderboard = (req, res) => {
     
-    User.find(/*{
-        "username": 1, 
-        "coinz": 1
-    }, */(err, docs) => {
+    User.find((err, docs) => {
         if(err){
             res.json({
                 "status":"error", 
