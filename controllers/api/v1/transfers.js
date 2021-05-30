@@ -90,10 +90,11 @@ const update = (req, res) => {
 }
     
 const getLeaderboard = (req, res) => {
+    
     User.find(/*{
-        "username": "1", 
-        "coinz": "1"
-    },*/ (err, docs) => {
+        "username": 1, 
+        "coinz": 1
+    }, */(err, docs) => {
         if(err){
             res.json({
                 "status":"error", 
@@ -103,10 +104,12 @@ const getLeaderboard = (req, res) => {
         if(!err){
             res.json({
                 "status": "success", 
-                "leaderboard": docs          
-        })
-        }//.sort({"coinz": -1})
-    });
+                data: {
+                    "leaderboard": docs          
+                }
+            })
+        }
+    }).sort({"coinz": -1});
 }
 
   module.exports.getAll = getAll;
