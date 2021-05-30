@@ -109,9 +109,32 @@ const getLeaderboard = (req, res) => {
     }).sort({"coinz": -1});
 }
 
+const getDetails = (req, res) => {
+    let id = req.params.id;
+   // let token = req.headers.authorization;
+    Coinz.find({_id:id},
+        (err, docs) => {
+        if(err){
+            res.json({
+                "status":"error", 
+                "message": "could not find details"
+            })
+        }
+        if(!err){
+            res.json({
+                "status": "success", 
+                data: {
+                    "details": docs          
+                }
+            })
+        }
+    }).sort({"coinz": -1});
+}
+
   module.exports.getAll = getAll;
   module.exports.create = create;
   module.exports.upload = upload;
   module.exports.status = status;
   module.exports.update = update;
   module.exports.getLeaderboard= getLeaderboard;
+  module.exports.getDetails= getDetails;

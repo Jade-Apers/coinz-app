@@ -7,5 +7,5 @@ fetch("http://localhost:3000/api/v1/transfers",{
 }).then(json =>{
     console.log(json);
 }).catch(err=>{
-    console.log("wenen");
+    console.log("err");
 });

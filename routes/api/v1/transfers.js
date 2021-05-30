@@ -7,6 +7,7 @@ router.post('/transfers', transfersController.create); //router post to create a
 router.get('/transfers/:id', transfersController.upload); //router get details of one transfer
 router.get('/status', transfersController.status);
 router.get('/leaderboard', transfersController.getLeaderboard);
+router.get('/details', transfersController.getDetails);
 
 module.exports = router;
 
