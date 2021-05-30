@@ -1,19 +1,38 @@
-/*<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Send Coinz Coinz App</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/app.css">
+    <title>Homepagina Coinz App</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/app.css">
     <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
 </head>
+<script>
+    let token = localStorage.getItem("token");
+    if(!token){
+        window.location.href = "login.html";
+    }
+</script>
 <body>
-    <div class="send-coinz">
-        <nav><a href="index.html" class="btn">Back</a></nav>
-        <h1>Send coinz</h1>
+    <nav>
+        <a href="leaderboard.html" class="btn btn--secondary">Leaderboard</a>
+        <a href="login.html" class="btn">Logout</a>
+    </nav>
+    <div>
+       <img src="/src/images/NV6A6959Enjoy.jpg" alt="profile picture" height=200px class="intro__picture">
+        <h1>Hi ...</h1>
+    </div>
+    <div class= "wallet">
+        <div class="wallet__value">
+            <h3>13,00 </h3>
+            <p>coinz in your wallet</p>
+        </div>
+    </div>
+
+     <div class="send-coinz"></div>
         <div class="send-coinz__form">
             <form class="form" action="#">
                 <label for="to">To</label>
@@ -28,13 +47,17 @@
                     <option class="form__reason__other" value="other">Other &#129500;</option>
                 </select><br><br>
                 <label for="message">Message</label>
-                <input type="text" value="(optional)">
-                <input type="submit" value="Confirm" class="btn">
-                <a href="index.html" class="btn btn--secondary">Cancel</a>
+                <input type="text" value="(optional)" class="form__message">
+                <input type="submit" value="Confirm" class="btn btnsendcoinz">
+                <p class="form__alert hide"></p>
             </form>
-        </div>
     </div>
-    <script src="../javascripts/login.js"></script>
-    <script src="../javascripts/sendcoinz.js"></script>
+    <div class="history">
+        <div class="history__received">
+         </div>
+    </div>
+    <script src="/javascripts/signup.js"></script>
+    <script src="/javascripts/login.js"></script>
+    <script src="/javascripts/sendcoinz.js"></script>
 </body>
 </html>

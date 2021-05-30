@@ -6,7 +6,7 @@ window.addEventListener("load", function(){
 
     else {
 
-        fetch("http://localhost:3000/api/v1/details", {
+        fetch("/api/v1/details", {
             method: "get", 
             headers: {
                 'Content-Type': 'application/json', 

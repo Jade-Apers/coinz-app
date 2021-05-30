@@ -53,7 +53,7 @@ const btnSendcoinz = document.querySelector(".btnsendcoinz").addEventListener("c
   const reason = document.querySelector(".form__reason").value;
   const message = document.querySelector(".form__message").value;
   
-  fetch('http://localhost:3000/api/v1/transfers',{
+  fetch('/api/v1/transfers',{
     method:"post",
     'headers':{
       'Content-Type': 'application/json',
